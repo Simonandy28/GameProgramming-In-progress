@@ -4,6 +4,10 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class TowerBehavior : MonoBehaviour
 {
+    [Header("Setup Fields")]
+    public GameObject arrowPrefab;
+    public Transform firePoint;
+
     [Header("Tower Stats")]
     // Shots per seconds
     public float fireRate = 1f;
@@ -65,11 +69,12 @@ public class TowerBehavior : MonoBehaviour
 
     void Shoot()
     {
-        BasicUnit basicUnit = currentTarget.GetComponent<BasicUnit>();
-
-        if (basicUnit != null)
-        {
-            basicUnit.CalculateDamage(damage);
+        GameObject arrowGO = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
+        
+        Projectile_Arrow arrow = arrowGO.GetComponent<Projectile_Arrow>();
+        if (arrow != null)
+        {   
+            arrow.Initiate(currentTarget.transform, damage);
         }
     }
 
@@ -79,7 +84,6 @@ public class TowerBehavior : MonoBehaviour
         {
             enemyUnitsInRange.Add(other.gameObject);
         }
-
     }
 
     void OnTriggerExit(Collider other)
