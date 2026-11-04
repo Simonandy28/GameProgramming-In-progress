@@ -1,0 +1,6 @@
+Walk: distance=49.21173, IsWalking=True, time=10.40199, timeScale=1, sky elapsed=10.421986520756
+Run: IsRunning=True, controller enabled=True, time=20.39557
+Swim: IsSwimming=False, IsSwimMoving=False, time=29.02693, timeScale=1
+Water trigger: swimming=True at (198.80, -0.31, 255.10) after 1 frames, time=67.10909
+Swim movement: IsSwimming=True, IsSwimMoving=True, time=102.8848
+PASS: walk/run/swim input and Animator confirmed. First continuous play reached 102.8848 seconds; sky advanced and timeScale remained 1.

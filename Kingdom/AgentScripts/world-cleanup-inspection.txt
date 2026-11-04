@@ -1,0 +1,1107 @@
+Playing=False paused=False scale=1
+SCENE Assets/Glowkeeper_Update.unity dirty=False
+ROOT Bushes
+ROOT ButterflySpawnAreas
+ROOT Cliffs
+ROOT Controls
+ROOT Sun and Moon Light
+ROOT Particle Effects
+ROOT PostProcessing
+ROOT Rocks
+ROOT Terrains
+ROOT Trees
+ROOT Water
+ROOT Waterplants
+ROOT Day Night Cycle
+ROOT Tenkoku DynamicSky
+ROOT Settlement Assets
+ROOT Hilltop Settlement Additions
+ROOT Island Ocean - Suimono
+ROOT Devine Lamp
+ROOT Firefly1Root
+ROOT Firefly1Root (1)
+ROOT Firefly1Root (2)
+ROOT PlayerRoot
+ROOT Main Camera
+ROOT WaterVolume
+ROOT WaterVolume (1)
+ROOT WaterVolume (4)
+ROOT WaterVolume (3)
+ROOT WaterVolume (2)
+ROOT Survivor A Lusth
+ROOT ZombieNavMesh
+ROOT NoZombieWater_01
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_01_01 (13)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Island Ocean - Suimono/Suimono Island Ocean Surface Suimono.Core.SuimonoObject enabled=False active=True
+COMP Bushes/Bush_02_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Tenkoku DynamicSky/SkySphere/SkySphereStar/StarRenderSystem Tenkoku.Core.ParticleStarfieldHandler enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (7) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_01_01 (18)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Island Ocean - Suimono/SUIMONO_Module/cam_SuimonoWake Suimono.Core.cameraTools enabled=False active=True
+COMP Bushes/Bush_01_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (2) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_03_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP PlayerRoot StaffFireflyCollector enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (12)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (25) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (3) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_03_02 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Tenkoku DynamicSky/SkySphere/PLANETS/planetUranus Tenkoku.Core.ParticlePlanetHandler enabled=True active=True
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Tenkoku DynamicSky/SkySphere/PLANETS/planetMars Tenkoku.Core.ParticlePlanetHandler enabled=True active=True
+COMP Bushes/Bush_03_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (17) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_01_01 (16)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (13)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Island Ocean - Suimono/SUIMONO_Module Suimono.Core.SuimonoModule enabled=False active=True
+COMP Bushes/Bush_03_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (20)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (16)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (6) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Tenkoku DynamicSky Tenkoku.Core.TenkokuCalculations enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (13)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (7) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_02_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (12)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (11)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Tenkoku DynamicSky/SkySphere/PLANETS/planetMercury Tenkoku.Core.ParticlePlanetHandler enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Main Camera IdyllicFantasyNature.CameraMovement enabled=False active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (13)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Tenkoku DynamicSky/Tenkoku_Library Tenkoku.Core.TenkokuLib enabled=True active=True
+COMP Bushes/Bush_01_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_02 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (9) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (14)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Day Night Cycle/Moonlight Color Grading UnityEngine.Rendering.Volume enabled=True active=False
+{"MonoBehaviour":{"m_Enabled":true,"m_EditorHideFlags":0,"m_Name":"","m_EditorClassIdentifier":"Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume","m_IsGlobal":true,"priority":20.0,"blendDistance":0.0,"weight":0.07148349285125733,"sharedProfile":{"fileID":11400000,"guid":"2d0551f51ff5f984f9bd06f8fd6a661f","type":2}}}
+COMP Bushes/Bush_03_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Island Ocean - Suimono/SUIMONO_Module/_caustic_effects Suimono.Core.fx_causticModule enabled=False active=True
+COMP Bushes/Bush_02_02 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (2) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (14) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_02_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (4) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (12)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (11)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Controls/WindControl IdyllicFantasyNature.WindControl enabled=True active=True
+COMP Bushes/Bush_02_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Survivor A Lusth ZombieAI enabled=True active=True
+{"MonoBehaviour":{"m_Enabled":true,"m_EditorHideFlags":0,"m_Name":"","m_EditorClassIdentifier":"Assembly-CSharp::ZombieAI","player":{"instanceID":0},"patrolRadius":10.0,"patrolSpeed":1.5,"waitTime":2.0,"visionDistance":12.0,"visionAngle":100.0,"chaseSpeed":5.0,"attackDistance":2.0,"hitDistance":2.5999999046325685,"attackHitDelay":0.6499999761581421,"attackCooldown":1.2000000476837159,"animator":{"instanceID":0}}}
+COMP Island Ocean - Suimono/Suimono Island Ocean Surface/cam_LocalReflections Suimono.Core.Suimono_DistanceBlur enabled=False active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (20) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (18) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_03_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (2) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (19)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (16)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=False
+COMP ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (23) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_03_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_02 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (16) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Controls/VegetationBendControl IdyllicFantasyNature.VegetationBendControl enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (13) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Island Ocean - Suimono/SUIMONO_Module/cam_SuimonoTrans Suimono.Core.cameraTools enabled=False active=True
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Island Ocean - Suimono GlowKeeper.SuimonoUrpOcean enabled=True active=True
+{"MonoBehaviour":{"m_Enabled":true,"m_EditorHideFlags":0,"m_Name":"","m_EditorClassIdentifier":"Assembly-CSharp::GlowKeeper.SuimonoUrpOcean","settings":{"instanceID":0},"library":{"instanceID":0},"oceanRenderer":{"instanceID":0},"oceanMaterial":{"fileID":2100000,"guid":"3ec09bf7f81f4a64e899fdb105d47ba8","type":2},"waveWorldSize":28.0,"shorelineFoamWidth":0.6499999761581421,"normalStrength":0.44999998807907107}}
+COMP Tenkoku DynamicSky/SkySphere/PLANETS/planetJupiter Tenkoku.Core.ParticlePlanetHandler enabled=True active=True
+COMP Tenkoku DynamicSky Tenkoku.Core.TenkokuModule enabled=True active=True
+COMP Bushes/Bush_03_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Tenkoku DynamicSky/Tenkoku_SkyFog Tenkoku.Effects.TenkokuSkyBlur enabled=False active=True
+COMP Bushes/Bush_03_02 (11)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Controls/Controller IdyllicFantasyNature.PlayerMovement enabled=False active=True
+COMP Bushes/Bush_03_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Main Camera Suimono.Core.Suimono_UnderwaterFog enabled=False active=True
+COMP Bushes/Bush_01_01 (21)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_02 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Day Night Cycle GlowKeeper.ForestDayNightCycle enabled=False active=False
+{"MonoBehaviour":{"m_Enabled":false,"m_EditorHideFlags":0,"m_Name":"","m_EditorClassIdentifier":"Assembly-CSharp::GlowKeeper.ForestDayNightCycle","sunsetSeconds":30.0,"nightSeconds":1800.0,"sunriseSeconds":30.0,"sunAndMoon":{"instanceID":0},"cycleSkybox":{"fileID":2100000,"guid":"bda0d8f8aebaef5409606dc4e02cd7cf","type":2},"nightColorGrading":{"instanceID":0},"daytimeRays":[{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0}],"dayAmbienceClip":{"fileID":8300000,"guid":"25cf4472b1e73184d97fd53b9fddc54a","type":3},"nightAmbienceClip":{"fileID":8300000,"guid":"ed1f7ee0b6e691545b62bffd09916c8c","type":3},"windClip":{"fileID":8300000,"guid":"ce802c5821452384b903eb10370dba6c","type":3},"dayAudioVolume":0.699999988079071,"nightAudioVolume":0.6000000238418579,"windAudioVolume":0.3499999940395355,"sunsetLightColor":{"r":1.0,"g":0.6499999761581421,"b":0.3799999952316284,"a":1.0},"sunsetIntensity":0.75,"sunsetAzimuth":270.0,"sunsetStartAltitude":8.0,"sunsetEndAltitude":-8.0,"sunsetSkyAmbient":{"r":0.47999998927116396,"g":0.3499999940395355,"b":0.2800000011920929,"a":1.0},"sunsetHorizonAmbient":{"r":0.3799999952316284,"g":0.25,"b":0.18000000715255738,"a":1.0},"sunsetGroundAmbient":{"r":0.2800000011920929,"g":0.23999999463558198,"b":0.20000000298023225,"a":1.0},"sunsetFog":{"r":0.550000011920929,"g":0.3199999928474426,"b":0.18000000715255738,"a":1.0},"moonLightColor":{"r":0.5799999833106995,"g":0.7300000190734863,"b":1.0,"a":1.0},"moonIntensity":0.5,"moonRiseAzimuth":95.0,"moonSetAzimuth":275.0,"moonMaxAltitude":55.0,"nightSkyAmbient":{"r":0.30000001192092898,"g":0.36000001430511477,"b":0.5,"a":1.0},"nightHorizonAmbient":{"r":0.2800000011920929,"g":0.30000001192092898,"b":0.3799999952316284,"a":1.0},"nightGroundAmbient":{"r":0.3199999928474426,"g":0.25999999046325686,"b":0.2199999988079071,"a":1.0},"nightFog":{"r":0.04500000178813934,"g":0.07500000298023224,"b":0.13500000536441804,"a":1.0},"nightReflections":0.18000000715255738,"sunriseLightColor":{"r":1.0,"g":0.699999988079071,"b":0.4000000059604645,"a":1.0},"morningLightColor":{"r":1.0,"g":0.9570000171661377,"b":0.8389999866485596,"a":1.0},"daylightIntensity":0.800000011920929,"sunriseAzimuth":90.0,"sunriseStartAltitude":-8.0,"sunriseEndAltitude":15.0,"morningSkyAmbient":{"r":0.46000000834465029,"g":0.5199999809265137,"b":0.6200000047683716,"a":1.0},"morningHorizonAmbient":{"r":0.3199999928474426,"g":0.36000001430511477,"b":0.4000000059604645,"a":1.0},"morningGroundAmbient":{"r":0.2800000011920929,"g":0.25999999046325686,"b":0.23999999463558198,"a":1.0},"morningFog":{"r":0.6274510025978088,"g":1.0,"b":0.9764705896377564,"a":1.0},"dayReflections":0.800000011920929}}
+COMP ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (15)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Island Ocean - Suimono/SUIMONO_Module/_caustic_effects/mainCausticObject Suimono.Core.fx_causticObject enabled=False active=True
+COMP Bushes/Bush_01_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (23)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (5) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (7) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_01_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (12)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (15)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (7) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_03_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (18)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (3) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Island Ocean - Suimono/SUIMONO_Module Suimono.Core.SuimonoModuleLib enabled=False active=True
+COMP Bushes/Bush_02_01 (11)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (5) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Island Ocean - Suimono/SUIMONO_Module/cam_SuimonoCaustic Suimono.Core.SuimonoDepth enabled=False active=True
+COMP Bushes/Bush_03_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (12)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (32) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP PlayerRoot StaffLampDepositor enabled=True active=True
+COMP Bushes/Bush_03_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Island Ocean - Suimono/SUIMONO_Module/cam_SuimonoCaustic Suimono.Core.cameraTools enabled=False active=True
+COMP Bushes/Bush_01_01 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (14)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (6) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_03_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Firefly1Root (1)/FlightMotion/FacingPivot1 FireflyDirection enabled=True active=True
+COMP Bushes/Bush_01_01 (14)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (20)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Main Camera ThirdPersonCamera enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (5) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_01_01 (16)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (13)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (4) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (4) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Tenkoku DynamicSky/SkySphere/PLANETS/planetNeptune Tenkoku.Core.ParticlePlanetHandler enabled=True active=True
+COMP Bushes/Bush_03_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (14)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Island Ocean - Suimono/SUIMONO_Module/_sound_effects Suimono.Core.fx_soundModule enabled=False active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (14)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (17)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (28) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (19) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_03_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (4) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Devine Lamp/Lamppost_14 LampReceiver enabled=True active=True
+COMP Bushes/Bush_01_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (15)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (11)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (15)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Tenkoku DynamicSky/SkySphere/EFFECTS/fxLightning Tenkoku.Core.TenkokuLightningFX enabled=True active=True
+COMP Bushes/Bush_02_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (17)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (24) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_01_01 (12)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Island Ocean - Suimono/SUIMONO_Module/cam_SuimonoCaustic Suimono.Core.cameraCausticsHandler enabled=False active=True
+COMP Bushes/Bush_02_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_03_02 (13)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (12)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (3) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (12) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (31) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_01_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Tenkoku DynamicSky GlowKeeper.TenkokuForestSchedule enabled=True active=True
+{"MonoBehaviour":{"m_Enabled":true,"m_EditorHideFlags":0,"m_Name":"","m_EditorClassIdentifier":"Assembly-CSharp::GlowKeeper.TenkokuForestSchedule","sky":{"instanceID":0},"library":{"instanceID":0},"moonlightGrading":{"instanceID":0},"daylightRays":[{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0},{"instanceID":0}],"eclipseRenderer":{"instanceID":0},"sunsetMinutes":3.0,"nightMinutes":30.0,"sunriseMinutes":2.0,"daylightMinutes":2.0,"sunsetStartHour":18.5,"skyYear":2019,"skyMonth":3,"skyDay":21,"minimumMoonIntensity":0.4000000059604645,"nightSkyFill":{"r":0.23999999463558198,"g":0.28999999165534975,"b":0.38999998569488528,"a":1.0},"nightHorizonFill":{"r":0.23000000417232514,"g":0.25,"b":0.30000001192092898,"a":1.0},"nightGroundFill":{"r":0.23000000417232514,"g":0.20000000298023225,"b":0.17000000178813935,"a":1.0},"sunsetOrangeStrength":1.0,"sunRaysStrength":0.8999999761581421,"sunlightLimit":0.800000011920929,"shadowStrength":0.6499999761581421}}
+COMP Bushes/Bush_01_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (1) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (12)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Island Ocean - Suimono/SUIMONO_Module/cam_SuimonoTrans Suimono.Core.SuimonoDepth enabled=False active=True
+COMP Bushes/Bush_01_01 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (30) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_02_01 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (12)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (6) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_03_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (10)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Firefly1Root/FlightMotion/FacingPivot FireflyDirection enabled=True active=True
+COMP Bushes/Bush_03_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (22) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_02_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_02_01 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (19)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (12)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (5) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_02_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_02 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Tenkoku DynamicSky/SkySphere/PLANETS/planetSaturn Tenkoku.Core.ParticlePlanetHandler enabled=True active=True
+COMP Bushes/Bush_02_02 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Island Ocean - Suimono/Suimono Island Ocean Surface/cam_LocalReflections Suimono.Core.cameraTools enabled=False active=True
+COMP Bushes/Bush_02_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Tenkoku DynamicSky/SkySphere/PLANETS/planetVenus Tenkoku.Core.ParticlePlanetHandler enabled=True active=True
+COMP Bushes/Bush_01_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (3) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (14)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (11)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (15) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_03_02 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Controls/Controller IdyllicFantasyNature.ExitGame enabled=True active=True
+COMP Bushes/Bush_01_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (11) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (2) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Island Ocean - Suimono/SUIMONO_Module/cam_SuimonoShoreline Suimono.Core.cameraTools enabled=False active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP PlayerRoot ThirdPersonAvatarController enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP PostProcessing UnityEngine.Rendering.Volume enabled=True active=True
+{"MonoBehaviour":{"m_Enabled":true,"m_EditorHideFlags":0,"m_Name":"","m_EditorClassIdentifier":"","m_IsGlobal":true,"priority":0.0,"blendDistance":0.0,"weight":1.0,"sharedProfile":{"fileID":11400000,"guid":"60fbea2528f42de468e32dbb5ab3dd5e","type":2}}}
+COMP Bushes/Bush_03_02 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (8) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_01_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (29) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Tenkoku DynamicSky/SkySphere/AMBIENT_SOUNDS Tenkoku.Core.TenkokuGlobalSound enabled=True active=True
+COMP Bushes/Bush_01_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Controls/VegetationBendControl IdyllicFantasyNature.VegetationBendControl enabled=True active=True
+COMP Bushes/Bush_03_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (21) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_01_01 (7)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP PlayerRoot PlayerDeath enabled=True active=True
+{"MonoBehaviour":{"m_Enabled":true,"m_EditorHideFlags":0,"m_Name":"","m_EditorClassIdentifier":"Assembly-CSharp::PlayerDeath","maxHealth":3,"animator":{"instanceID":0},"deathAnimationDuration":2.0}}
+COMP Bushes/Bush_01_01 (17)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (12)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (11)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Island Ocean - Suimono/SUIMONO_Module/cam_SuimonoTrans Suimono.Core.cameraCausticsHandler enabled=False active=True
+COMP Bushes/Bush_01_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (22)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_02/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Tenkoku DynamicSky/Tenkoku_SkyFog Tenkoku.Core.TenkokuCameraTools enabled=False active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (2)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Firefly1Root (2)/FlightMotion/FacingPivot2 FireflyDirection enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (26) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Island Ocean - Suimono/SUIMONO_Module/cam_SuimonoNormals Suimono.Core.cameraTools enabled=False active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_03 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea/Butterfly_02 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (4)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_02 (1)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_03_02 (12)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (15)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (12)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_01 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_02_02 (3)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (27) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_01_01 (9)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_01_01 (5)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_03 (1) IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (11)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (6) IdyllicFantasyNature.ButterflySpawn enabled=True active=False
+COMP Bushes/Bush_03_02 (13)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_03_01/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_02 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (10) IdyllicFantasyNature.ButterflySpawnArea enabled=True active=True
+COMP Bushes/Bush_01_01 (12)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_01 (6)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Bushes/Bush_02_02 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP Tenkoku DynamicSky/Tenkoku_Sky Tenkoku.Core.TenkokuCameraTools enabled=False active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP Bushes/Bush_01_01 (8)/LeafTrigger IdyllicFantasyNature.BushLeafTrigger enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_01 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+COMP ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_03 IdyllicFantasyNature.ButterflySpawn enabled=True active=True
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (7) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (6) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM PlayerRoot/Jumanji_AllAnim controller=Assets/GlowKeeper/Animation/Wizard/WizardAnimator.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (7) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (4) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (12)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (7) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_02 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (6) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM Firefly1Root (2)/FlightMotion controller=Assets/FireFly/source/FlightMotion 2.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (2) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (4) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (3) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (5) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_03 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (12)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM Firefly1Root/FlightMotion controller=Assets/FireFly/source/FlightMotion.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_03 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM Firefly1Root (1)/FlightMotion controller=Assets/FireFly/source/FlightMotion 1.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_02 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (12)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (6) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (5) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (12)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (2)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (2) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (18)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (3) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (12)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (7)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea/Butterfly_02 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (3) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_02 (4) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (10)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (13)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 (5) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (21)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (6)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (1)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (12)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (30)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (33)/Butterfly_01 (2) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (17)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM Survivor A Lusth controller=Assets/GlowKeeper/Animation/Zombie/ZombieAnimator.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (15)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_02 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (20)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (28)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (26)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (8)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (16)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (23)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (3)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (31)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (32)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (14)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (11)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (27)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (25)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (4)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (22)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (9)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (19)/Butterfly_01 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (24)/Butterfly_01 (1) controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_01.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (29)/Butterfly_02 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_02.controller
+ANIM ButterflySpawnAreas/ButterflySpawnArea (5)/Butterfly_03 controller=Assets/Idyllic Fantasy Nature/Animations/Butterfly_Path_03.controller

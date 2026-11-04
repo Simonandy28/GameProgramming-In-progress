@@ -1,0 +1,17 @@
+PASS Humanoid rig valid
+PASS Full clothed armor set and both axes visible
+PASS No magic staff or staff attachment
+PASS PlayerRoot retains movement only; collection/deposit mechanics absent
+PASS Original sky timings retained
+Left boot sole-to-ground gap=-0.03643799m
+PASS Left boot planted on terrain
+Right boot sole-to-ground gap=-0.03348541m
+PASS Right boot planted on terrain
+PASS Legs retain correct left/right stance
+PASS Walking moves the character and reaches Walking animation
+PASS Running moves the character and reaches Running animation
+PASS Jump raises avatar and activates jumping
+PASS Swimming reaches actual Swimming animation with armor
+PASS Swimming ascent works
+PASS Swimming descent works
+Completed at 21.72589 seconds; timeScale=1

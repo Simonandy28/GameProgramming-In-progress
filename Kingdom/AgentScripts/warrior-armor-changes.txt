@@ -1,0 +1,13 @@
+Existing foot IK Idle=False
+Existing foot IK Walking=False
+Existing foot IK Running=True
+Existing foot IK Jump=True
+Existing foot IK Swimming=False
+Existing foot IK TreadingWater=False
+Existing foot IK HitBody=False
+Existing foot IK Death=False
+Armored active meshes: A1_Loincloth,arm,Axe_L,Axe_R,Beard,A1_Armor,A1_Armor_Belt,A1_ArmorBelt_Buckle,Chain,Eye Brows,Eyes,Face,Forearm,Hair,Hand,A1_Forearm_Plate.L.001,A1_Shoulder Plates,A2_Forearm Plates,head,A1_Boots,A1_Knee Plate_L,A1_Knee Plate_R,A1_Pant,neck,Shoulder,Trapezius
+Removed staff, collection/deposit scripts, collectible fly objects and lamp interaction helpers from Assets/Glowkeeper_Update.unity; scenery lamps retained.
+Removed staff, collection/deposit scripts, collectible fly objects and lamp interaction helpers from Assets/Scenes/GlowKeeper Forest.unity; scenery lamps retained.
+Removed staff, collection/deposit scripts, collectible fly objects and lamp interaction helpers from Assets/_Recovery/0.unity; scenery lamps retained.
+Removed staff, collection/deposit scripts, collectible fly objects and lamp interaction helpers from Assets/_Recovery/0 (1).unity; scenery lamps retained.

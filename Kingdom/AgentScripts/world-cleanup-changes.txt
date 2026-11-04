@@ -1,0 +1,8 @@
+Assets/Scenes/GlowKeeper Forest.unity: removed zombie=1, health/death=1, legacy cycle=1, zombie navigation helpers=2; preserved world transforms, avatar configuration/Animator and sky timings.
+Assets/_Recovery/0.unity: removed zombie=0, health/death=0, legacy cycle=1, zombie navigation helpers=0; preserved world transforms, avatar configuration/Animator and sky timings.
+Assets/_Recovery/0 (1).unity: removed zombie=1, health/death=1, legacy cycle=1, zombie navigation helpers=2; preserved world transforms, avatar configuration/Animator and sky timings.
+Removed color filter override: ChannelMixer
+Removed color filter override: ColorAdjustments
+Removed color filter override: ShadowsMidtonesHighlights
+Removed color filter override: WhiteBalance
+Removed color filter override: SplitToning

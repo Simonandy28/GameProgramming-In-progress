@@ -1,0 +1,8 @@
+case=0 placement=True stabilize=True Walking frames=457 flex=1.326477..40.06461 lateral=0.02340853 poleStep=4.750153
+case=0 placement=True stabilize=True Running frames=328 flex=1.324127..119.9029 lateral=0.05545668 poleStep=26.0121
+case=1 placement=False stabilize=True Walking frames=322 flex=1.325745..40.05028 lateral=0.02339496 poleStep=8.372852
+case=1 placement=False stabilize=True Running frames=326 flex=1.326477..119.9397 lateral=0.05516955 poleStep=27.63391
+case=2 placement=False stabilize=False Walking frames=330 flex=1.339981..40.04857 lateral=0.02338841 poleStep=13.60495
+case=2 placement=False stabilize=False Running frames=392 flex=1.322632..119.8988 lateral=0.0555391 poleStep=22.33334
+case=3 placement=True stabilize=False Walking frames=413 flex=1.324265..40.03448 lateral=0.02337317 poleStep=6.277698
+case=3 placement=True stabilize=False Running frames=355 flex=1.32486..119.9216 lateral=0.05546589 poleStep=35.54795

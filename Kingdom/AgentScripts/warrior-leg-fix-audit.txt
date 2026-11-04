@@ -1,0 +1,7 @@
+Playing=False paused=False controller=AxeWarriorAnimator valid human=True
+Walking source=Assets/GlowKeeper/Animation/Wizard/Walking Left Turn.fbx duration=1.2s human=True FootIK=False
+PASS IK=False Left kneeFlex=1.33..40.07 max rotation step=3.20 max pole step=5.51 side sway=0.025 spikes=0
+PASS IK=False Right kneeFlex=1.33..50.20 max rotation step=5.29 max pole step=2.87 side sway=0.018 spikes=0
+Running source=Assets/GlowKeeper/Animation/Wizard/Running.fbx duration=0.6333334s human=True FootIK=False
+PASS IK=False Left kneeFlex=1.33..119.84 max rotation step=3.65 max pole step=5.54 side sway=0.060 spikes=0
+PASS IK=False Right kneeFlex=1.37..138.41 max rotation step=3.63 max pole step=7.32 side sway=0.072 spikes=0

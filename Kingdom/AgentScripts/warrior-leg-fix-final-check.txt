@@ -1,0 +1,1 @@
+PASS: locomotion foot IK disabled; standing terrain correction waits for settled Idle; original clips and movement/camera retained. Live tracking passed over 403 walk and 521 run samples, plus standing/jump/swim checks. Temporary test platforms discarded. Full 47-minute sky cycle retained; saved scene has zero missing scripts.

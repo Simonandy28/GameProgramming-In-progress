@@ -1,0 +1,4 @@
+Assets/Glowkeeper_Update.unity: sunrise at 06:00; morning/noon/afternoon daylight=12min, sunrise=2min, sunset=3min, night=30min. Loop=47min.
+Assets/Scenes/GlowKeeper Forest.unity: sunrise at 06:00; morning/noon/afternoon daylight=12min, sunrise=2min, sunset=3min, night=30min. Loop=47min.
+Assets/_Recovery/0.unity: sunrise at 06:00; morning/noon/afternoon daylight=12min, sunrise=2min, sunset=3min, night=30min. Loop=47min.
+Assets/_Recovery/0 (1).unity: sunrise at 06:00; morning/noon/afternoon daylight=12min, sunrise=2min, sunset=3min, night=30min. Loop=47min.

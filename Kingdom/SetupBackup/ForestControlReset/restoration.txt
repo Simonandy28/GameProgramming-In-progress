@@ -1,0 +1,8 @@
+Removed scene wizard objects: 0
+Removed missing control scripts: 1
+Reconnected vegetation components: 2
+Movement enabled=True; capsule enabled=True; mouse look enabled=True
+Camera parent=Controller; camera local=(0.00, 0.70, 0.00); player=(169.99, 19.94, 166.09)
+Unassigned bend origins=0
+Wizard-named scene objects=0
+Missing scene scripts=0

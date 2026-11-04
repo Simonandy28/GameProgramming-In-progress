@@ -1,0 +1,5 @@
+Assets/Glowkeeper_Update.unity: PASS, no missing scripts or zombie/old cycle objects; saved.
+Assets/Scenes/GlowKeeper Forest.unity: PASS, no missing scripts or zombie/old cycle objects; saved.
+Assets/_Recovery/0.unity: PASS, no missing scripts or zombie/old cycle objects; saved.
+Assets/_Recovery/0 (1).unity: PASS, no missing scripts or zombie/old cycle objects; saved.
+Current scene restored. Active cycle: 3-minute sunset, 30-minute night, 2-minute sunrise, 2-minute daylight. Only Glowkeeper_Update enabled for builds.

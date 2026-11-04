@@ -1,0 +1,1 @@
+Installed Suimono ocean at sea level 3, covering 2400 x 2400 metres. Uses the imported Suimono prefab settings, three native wave textures, foam texture, and wave-height formula through a URP bridge. Legacy Built-in cameras and underwater FX disabled. Inland pond retained.

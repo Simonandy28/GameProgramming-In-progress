@@ -1,0 +1,1 @@
+PASS: saved Assets/Glowkeeper_Update.unity; original humanoid figure removed, warrior Avatar/Animator valid, original staff constraint and firefly/lamp references valid, zero missing scripts; Play stopped and runtime test relocations discarded.

@@ -1,0 +1,1 @@
+PASS Live left-leg tracking across multiple strides: walking frames=403, max lateral knee bend=0.02340832m, max knee-plane frame change=6.522786deg; running frames=521, max lateral knee bend=0.05555093m, max knee-plane frame change=15.79239deg.

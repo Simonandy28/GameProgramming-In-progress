@@ -1,0 +1,15 @@
+PASS 0s -> 6 absolute sky hours, Sunrise
+PASS 60s -> 7 absolute sky hours, Sunrise
+PASS 120s -> 8 absolute sky hours, Morning
+PASS 264s -> 10 absolute sky hours, Morning
+PASS 408s -> 12 absolute sky hours, Noon
+PASS 480s -> 13 absolute sky hours, Noon
+PASS 552s -> 14 absolute sky hours, Afternoon
+PASS 696s -> 16 absolute sky hours, Afternoon
+PASS 840s -> 18 absolute sky hours, Sunset
+PASS 930s -> 19 absolute sky hours, Sunset
+PASS 1020s -> 20 absolute sky hours, Night
+PASS 1920s -> 25 absolute sky hours, Night
+PASS 2820s -> 30 absolute sky hours, Sunrise
+PASS 5640s -> 54 absolute sky hours, Sunrise
+PASS clock is continuous and advances monotonically across two full loops.

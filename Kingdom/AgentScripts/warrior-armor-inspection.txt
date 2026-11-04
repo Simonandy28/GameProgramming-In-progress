@@ -1,0 +1,91 @@
+Scene=Assets/Glowkeeper_Update.unity playing=False dirty=False pos=(147.29, 16.23, 191.21) model local=(0.00, 0.06, 0.00) scale=(0.93, 0.93, 0.93)
+PLAYER ThirdPersonAvatarController
+PLAYER StaffFireflyCollector
+PLAYER StaffLampDepositor
+ACTIVE MESH A1_Loincloth bounds=Center: (147.34, 17.06, 191.22), Extents: (0.22, 0.23, 0.24)
+ACTIVE MESH arm bounds=Center: (147.34, 17.66, 191.22), Extents: (0.24, 0.13, 0.56)
+ACTIVE MESH Axe_L bounds=Center: (147.24, 17.62, 190.41), Extents: (0.33, 0.09, 0.15)
+ACTIVE MESH Beard bounds=Center: (147.22, 17.80, 191.20), Extents: (0.11, 0.10, 0.15)
+ACTIVE MESH Chain bounds=Center: (147.31, 17.66, 191.22), Extents: (0.17, 0.10, 0.18)
+ACTIVE MESH Eye Brows bounds=Center: (147.17, 17.91, 191.18), Extents: (0.03, 0.01, 0.07)
+ACTIVE MESH Eyes bounds=Center: (147.18, 17.89, 191.19), Extents: (0.03, 0.01, 0.07)
+ACTIVE MESH Face bounds=Center: (147.23, 17.82, 191.20), Extents: (0.13, 0.11, 0.15)
+ACTIVE MESH Feet bounds=Center: (147.23, 16.33, 191.20), Extents: (0.17, 0.08, 0.20)
+ACTIVE MESH Forearm bounds=Center: (147.30, 17.64, 191.21), Extents: (0.25, 0.10, 0.71)
+ACTIVE MESH Hair bounds=Center: (147.31, 17.87, 191.21), Extents: (0.19, 0.19, 0.16)
+ACTIVE MESH Hand bounds=Center: (147.20, 17.60, 191.19), Extents: (0.29, 0.10, 0.89)
+ACTIVE MESH head bounds=Center: (147.29, 17.92, 191.21), Extents: (0.16, 0.13, 0.14)
+ACTIVE MESH hips_02 bounds=Center: (147.32, 17.18, 191.22), Extents: (0.13, 0.08, 0.15)
+ACTIVE MESH Lower_Torso bounds=Center: (147.33, 17.30, 191.22), Extents: (0.15, 0.13, 0.20)
+ACTIVE MESH neck bounds=Center: (147.33, 17.75, 191.22), Extents: (0.14, 0.10, 0.16)
+ACTIVE MESH shin bounds=Center: (147.33, 16.59, 191.22), Extents: (0.14, 0.26, 0.20)
+ACTIVE MESH Shoulder bounds=Center: (147.36, 17.64, 191.23), Extents: (0.17, 0.11, 0.34)
+ACTIVE MESH thigh bounds=Center: (147.31, 17.00, 191.21), Extents: (0.15, 0.18, 0.19)
+ACTIVE MESH Trapezius bounds=Center: (147.33, 17.63, 191.22), Extents: (0.23, 0.12, 0.30)
+ACTIVE MESH Upper_Torso bounds=Center: (147.32, 17.52, 191.22), Extents: (0.25, 0.15, 0.31)
+Hips=Hips rootPos=(0.00, 0.89, 0.00) localRot=(89.98, 0.00, 0.00)
+LeftUpperLeg=Thigh.l rootPos=(-0.11, 0.91, -0.01) localRot=(3.78, 180.17, 181.33)
+LeftLowerLeg=Shin.l rootPos=(-0.11, 0.56, 0.01) localRot=(9.42, 0.08, 357.57)
+LeftFoot=Foot.l rootPos=(-0.11, 0.14, -0.03) localRot=(279.19, 318.10, 42.03)
+LeftToes=Toe.L rootPos=(-0.11, 0.10, 0.11) localRot=(346.80, 359.90, 359.78)
+RightUpperLeg=Thigh.r rootPos=(0.11, 0.91, -0.01) localRot=(3.78, 179.83, 178.67)
+RightLowerLeg=Shin.r rootPos=(0.11, 0.56, 0.01) localRot=(9.42, 359.92, 2.43)
+RightFoot=Foot.r rootPos=(0.11, 0.14, -0.03) localRot=(279.19, 41.90, 317.97)
+RightToes=Toe.R rootPos=(0.11, 0.10, 0.11) localRot=(346.80, 0.10, 0.22)
+HUMANOID twist=0.5,0.5 stretch=0.05 spacing=0 translation=False
+ARMOR A1_Loincloth active=False
+ARMOR arm active=False
+ARMOR Axe_L active=False
+ARMOR Axe_R active=False
+ARMOR Beard active=False
+ARMOR A1_Armor active=False
+ARMOR A1_Armor_Belt active=False
+ARMOR A1_ArmorBelt_Buckle active=False
+ARMOR A2_Armor active=False
+ARMOR A2_Pouch active=False
+ARMOR A3_Armor active=False
+ARMOR A3_Pouch active=False
+ARMOR A3_Pouch_2 active=False
+ARMOR Chain active=False
+ARMOR Eye Brows active=False
+ARMOR Eyes active=False
+ARMOR Face active=False
+ARMOR Feet active=False
+ARMOR Forearm active=False
+ARMOR Hair active=False
+ARMOR Hand active=False
+ARMOR A1_Forearm_Plate.L.001 active=False
+ARMOR A1_Shoulder Plates active=False
+ARMOR A2_Forearm Plates active=False
+ARMOR A2_Shoulder Plate active=False
+ARMOR A3_Forearm Plates active=False
+ARMOR A3_Shoulder Plates active=False
+ARMOR head active=False
+ARMOR A2_Helmet active=False
+ARMOR A3_Helmet active=False
+ARMOR hips active=False
+ARMOR hips_02 active=False
+ARMOR A1_Boots active=False
+ARMOR A1_Knee Plate_L active=False
+ARMOR A1_Knee Plate_R active=False
+ARMOR A1_Pant active=False
+ARMOR A2_Boots active=False
+ARMOR A2_Knee_Plates_2 active=False
+ARMOR A2_pant active=False
+ARMOR A2_Thigh_Plates active=False
+ARMOR A3_Boots active=False
+ARMOR A3_Knee Plates active=False
+ARMOR A3_Pant active=False
+ARMOR A3_Thigh_Plates active=False
+ARMOR Lower_Torso active=False
+ARMOR neck active=False
+ARMOR shin active=False
+ARMOR Shoulder active=False
+ARMOR thigh active=False
+ARMOR Trapezius active=False
+ARMOR Upper_Torso active=False
+STAFF=FireflyHoldPoint
+COLLECT FLY Firefly1Root
+COLLECT FLY Firefly1Root (1)
+COLLECT FLY Firefly1Root (2)
+LAMP Lamppost_14 light=MagicLampLight destination=FireflyDestination

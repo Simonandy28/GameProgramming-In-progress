@@ -1,0 +1,20 @@
+Tenkoku active: True; schedule active: True
+Custom cycles enabled: 0
+Moon type (native=0): 0; local position: (-0.51, 0.00, 0.00)
+Skybox: GlowKeeper/Tenkoku Orange Sunset URP
+Sun rays feature active: True
+GlowKeeper/Tenkoku Moon URP: found
+GlowKeeper/Tenkoku Sun URP: found
+Hidden/GlowKeeper/Forest Sun Rays: found
+GlowKeeper/Tenkoku Orange Sunset URP: found
+GlowKeeper/Tenkoku Stable Clouds URP: found
+t=0: 18:30 sunY=0.117 moonElevation=-28.6 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=90: 19:30 sunY=-0.017 moonElevation=-3.0 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=180: 20:30 sunY=-0.156 moonElevation=16.6 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=630: 23:00 sunY=-0.506 moonElevation=40.4 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=1080: 01:30 sunY=-0.822 moonElevation=41.1 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=1530: 04:00 sunY=-0.943 moonElevation=29.8 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=1979: 06:29 sunY=-0.157 moonElevation=13.6 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=1980: 06:30 sunY=-0.154 moonElevation=13.6 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=2100: 08:30 sunY=0.484 moonElevation=-1.1 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=2220: 18:30 sunY=0.119 moonElevation=-54.8 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)

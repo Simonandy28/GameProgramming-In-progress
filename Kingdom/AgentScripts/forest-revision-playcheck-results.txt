@@ -1,0 +1,25 @@
+Runtime sky active=True custom cycle active=False
+Native moon local=(-0.51, 0.00, 0.00) pos=(324.60, 905.61, -476.70) sky=(169.99, 20.64, 166.09) renderer=True
+Ocean bridges=1
+Houses added=4 statues added=6
+Tenkoku active: True; schedule active: True
+Custom cycles enabled: 0
+Moon type (native=0): 0; local position: (-0.51, 0.00, 0.00)
+Skybox: GlowKeeper/Tenkoku Orange Sunset URP
+Sun rays feature active: True
+GlowKeeper/Tenkoku Moon URP: found
+GlowKeeper/Tenkoku Sun URP: found
+Hidden/GlowKeeper/Forest Sun Rays: found
+GlowKeeper/Tenkoku Orange Sunset URP: found
+GlowKeeper/Tenkoku Stable Clouds URP: found
+t=0: 18:30 sunY=0.146 moonElevation=-15.4 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=90: 19:30 sunY=-0.068 moonElevation=-3.8 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=180: 20:30 sunY=-0.276 moonElevation=7.9 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=630: 23:00 sunY=-0.685 moonElevation=35.6 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=1080: 01:30 sunY=-0.804 moonElevation=53.2 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=1530: 04:00 sunY=-0.584 moonElevation=45.0 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=1979: 06:29 sunY=-0.117 moonElevation=19.7 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=1980: 06:30 sunY=-0.116 moonElevation=19.6 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=2100: 08:30 sunY=0.306 moonElevation=-4.0 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+t=2220: 18:30 sunY=0.149 moonElevation=-28.8 nativeMoonUnchanged=True moonLocal=(-0.51, 0.00, 0.00)
+

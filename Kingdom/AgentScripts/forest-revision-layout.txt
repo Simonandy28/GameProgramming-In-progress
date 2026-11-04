@@ -1,0 +1,11 @@
+House_Hilltop_06 at (54.00, 14.07, 130.50)
+House_Hilltop_07 at (110.50, 17.30, 148.50)
+House_Hilltop_08 at (172.50, 18.89, 156.50)
+House_Hilltop_09 at (154.00, 16.41, 187.00)
+Statue_Hilltop_Guardian_01 on Hilltop_Stone_01 green hill at (63.00, 17.24, 142.50) rockTop=19.54
+Statue_Hilltop_Guardian_02 on Hilltop_Stone_02 green hill at (84.50, 16.72, 140.50) rockTop=19.39
+Statue_Hilltop_Guardian_03 on Hilltop_Stone_03 green hill at (149.00, 17.27, 136.00) rockTop=20.38
+Statue_Hilltop_Guardian_04 on Hilltop_Stone_04 green hill at (182.00, 18.52, 164.50) rockTop=20.82
+Statue_Hilltop_Guardian_05 on Hilltop_Stone_05 green hill at (119.50, 17.08, 192.50) rockTop=19.75
+Statue_Hilltop_Guardian_06 on Hilltop_Stone_06 green hill at (79.50, 15.66, 173.50) rockTop=18.77
+Added houses=4; statues=6; hilltop supporting rocks=6. Surface texture maps preserved.

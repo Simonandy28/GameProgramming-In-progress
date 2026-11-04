@@ -1,0 +1,19 @@
+PASS Warrior humanoid retargeting valid
+PASS Original animation controller retained
+PASS Walk input moves warrior and activates walking
+Walk clips=mixamo.com
+PASS Run input moves warrior and activates running
+Run clips=mixamo.com
+PASS Jump input activates jump animation and lifts avatar
+PASS Water trigger and swimming movement work with new Animator
+Swim clips=mixamo.com
+PASS Swimming ascend input works
+PASS Swimming descend input works
+PASS Existing firefly hold point retained on player staff
+PASS X collects all nearby fireflies onto the retained staff
+PASS Collected fireflies follow the new avatar staff attachment
+PASS E deposits fireflies and lights lamp
+PASS Deposited fireflies reach the lamp destination
+PASS Original third-person camera still follows PlayerRoot
+Completed at gameplay time=8.277342, scale=1
+PASS Actual Swimming state reached after transition; humanoid=True, staff source=StaffSocket

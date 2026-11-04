@@ -1,0 +1,27 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "0BCFC5B20C90D034C8DD78166AFFF1A2DF7BC32DC59061E20B58C6188896ACCC",
+    "Path": "D:\\Kingdom\\Assets\\GlowKeeper\\Scripts\\ThirdPersonAvatarController.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "D199BF9F40DF5E517DA06C4B92016ED10B6DD3F53D027FE23DFFC1C0C3FF05E8",
+    "Path": "D:\\Kingdom\\Assets\\GlowKeeper\\Scripts\\ThirdPersonCamera.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "C0BDA449508D150966074578A31F7B4A73122977DD39078489E2D767591165C9",
+    "Path": "D:\\Kingdom\\Assets\\GlowKeeper\\Scripts\\StaffFireflyCollector.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "B768BB01B16D014A932707ACB23D398DC2110FFCC3075E1638102F080917359A",
+    "Path": "D:\\Kingdom\\Assets\\GlowKeeper\\Scripts\\StaffLampDepositor.cs"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "366118AF49C76A55B37AC065A19F8DD02E12FF55EAF32B91B749AEDB5763F683",
+    "Path": "D:\\Kingdom\\Assets\\GlowKeeper\\Animation\\Wizard\\WizardAnimator.controller"
+  }
+]

@@ -1,0 +1,10 @@
+Movement enabled=True; capsule enabled=True; mouse look enabled=True
+Camera parent=Controller; camera local=(0.00, 0.70, 0.00); player=(169.99, 19.94, 166.09)
+Unassigned bend origins=0
+Wizard-named scene objects=0
+Missing scene scripts=0
+W displacement=(-0.87, -0.04, 0.09) passed=True
+S displacement=(1.44, 0.17, -0.15) passed=True
+A displacement=(-0.10, 0.07, -0.93) passed=True
+D displacement=(0.10, -0.07, 1.02) passed=True
+Space displacement=(0.00, 0.52, 0.00) passed=True

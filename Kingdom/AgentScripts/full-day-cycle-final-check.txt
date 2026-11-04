@@ -1,0 +1,4 @@
+PASS Assets/Glowkeeper_Update.unity: full 47-minute cycle saved; sunrise start, no missing scripts.
+PASS Assets/Scenes/GlowKeeper Forest.unity: full 47-minute cycle saved; sunrise start, no missing scripts.
+PASS Assets/_Recovery/0.unity: full 47-minute cycle saved; sunrise start, no missing scripts.
+PASS Assets/_Recovery/0 (1).unity: full 47-minute cycle saved; sunrise start, no missing scripts.

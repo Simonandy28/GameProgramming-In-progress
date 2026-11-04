@@ -1,0 +1,9 @@
+PASS Dawn phase=Sunrise clock=2019-3-21 06:00 sun elevation=-13.05 sun enabled=False moon enabled=True
+PASS Sunrise phase=Sunrise clock=2019-3-21 07:00 sun elevation=-0.82 sun enabled=True moon enabled=True
+PASS Morning phase=Morning clock=2019-3-21 10:00 sun elevation=34.82 sun enabled=True moon enabled=False
+PASS Noon phase=Noon clock=2019-3-21 13:00 sun elevation=55.79 sun enabled=True moon enabled=False
+PASS Afternoon phase=Afternoon clock=2019-3-21 16:00 sun elevation=37.47 sun enabled=True moon enabled=False
+PASS Sunset phase=Sunset clock=2019-3-21 19:00 sun elevation=2.26 sun enabled=True moon enabled=True
+PASS Night phase=Night clock=2019-3-22 01:00 sun elevation=-53.93 sun enabled=False moon enabled=True
+PASS NextDawn phase=Sunrise clock=2019-3-22 06:00 sun elevation=-12.76 sun enabled=False moon enabled=True
+PASS native sky reaches noon, transitions to night and advances to the following day's sunrise.

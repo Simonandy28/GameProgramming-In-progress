@@ -1,0 +1,5 @@
+Moon renderer=True active=True layer=0 bounds=Center: (-852.10, 2165.88, -2072.84), Extents: (130.56, 140.61, 160.20)
+Moon pos=(-852.10, 2165.88, -2072.84) scale=(200.92, 200.92, 200.92) moon sphere pos=(-1209.00, 123.00, -589.00) sky=(-1209.00, 123.00, -589.00)
+Camera=(169.99, 20.64, 166.09) far=1500 culling=-1
+Material=mat_moon color=RGBA(0.000, 0.000, 0.000, 1.000) texture=tex_moonsphere (UnityEngine.Texture2D) primary=RGBA(1.000, 1.000, 1.000, 1.000)
+SunDirection=(-0.48, -0.82, 0.31, 0.00) MoonLightColor=RGBA(0.800, 0.835, 0.867, 1.000)

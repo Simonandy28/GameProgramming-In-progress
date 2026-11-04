@@ -1,0 +1,5 @@
+PASS Assets/Glowkeeper_Update.unity: no staff objects/collectibles or missing scripts
+PASS Assets/Scenes/GlowKeeper Forest.unity: no staff objects/collectibles or missing scripts
+PASS Assets/_Recovery/0.unity: no staff objects/collectibles or missing scripts
+PASS Assets/_Recovery/0 (1).unity: no staff objects/collectibles or missing scripts
+PASS current scene saved; complete armor, sleeves, both axes, calibrated foot solver and humanoid animations retained; original movement/camera and sky timings preserved.
