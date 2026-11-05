@@ -32,4 +32,9 @@ public class EnemySpawner : MonoBehaviour
         instance.player = player;
         return;
     }
+
+    public void destroyEnemy(EnemyController enemy)
+    {
+        Destroy(enemy.gameObject);
+    }
 }

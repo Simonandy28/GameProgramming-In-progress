@@ -5,12 +5,16 @@ using UnityEngine.InputSystem.XR;
 public class EnemyController : MonoBehaviour
 {
     public GameObject player;
+    public EnemySpawner spawner;
     [SerializeField] float speed = 1f;
     private CharacterController controller;
+    public float maxHP = 3;
+    private float currentHP;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         controller = this.gameObject.GetComponent<CharacterController>();
+        currentHP = maxHP;
     }
 
     // Update is called once per frame
@@ -25,6 +29,15 @@ public class EnemyController : MonoBehaviour
             moveDirection * speed;
 
             controller.Move(velocity * Time.deltaTime);
+        }
+    }
+
+    public void Damaged(float damage)
+    {
+        currentHP -= damage;
+        if(currentHP <= 0)
+        {
+            spawner.destroyEnemy(this);
         }
     }
 }
