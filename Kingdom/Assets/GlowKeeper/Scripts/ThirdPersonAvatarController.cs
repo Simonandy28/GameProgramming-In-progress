@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -26,7 +27,12 @@ public class ThirdPersonAvatarController : MonoBehaviour
     [Header("Swimming")]
     public float swimSpeed = 3f;
     public float swimVerticalSpeed = 2f;
+    public float WaterSurface => FindWaterSurface();
+    public bool IsSwimming => !float.IsNegativeInfinity(WaterSurface);
 
+    private const float WaterEntryDepth = 0.08f;
+    private const float SurfaceSwimDepth = 0.85f;
+    private readonly HashSet<Collider> waterContacts = new HashSet<Collider>();
     private CharacterController controller;
     private float verticalVelocity;
 
@@ -103,10 +109,18 @@ public class ThirdPersonAvatarController : MonoBehaviour
             descendAction != null &&
             descendAction.action.IsPressed();
 
-        // Move the wizard.
+        float waterSurface = WaterSurface;
+        bool inWater = !float.IsNegativeInfinity(waterSurface);
+        if (isSwimming != inWater)
+        {
+            isSwimming = inWater;
+            isJumping = false;
+            verticalVelocity = 0f;
+        }
+
         if (isSwimming)
         {
-            HandleSwimming(moveDirection, goingUp, goingDown);
+            HandleSwimming(moveDirection, goingUp, goingDown, waterSurface);
         }
         else
         {
@@ -177,48 +191,42 @@ public class ThirdPersonAvatarController : MonoBehaviour
     void HandleSwimming(
         Vector3 moveDirection,
         bool goingUp,
-        bool goingDown)
+        bool goingDown,
+        float waterSurface)
     {
-        float verticalInput = 0f;
-
-        if (goingUp)
-        {
-            verticalInput += 1f;
-        }
-
+        // Hold depth unless the player dives or swims up.
+        float verticalMove = 0f;
         if (goingDown)
+            verticalMove = -swimVerticalSpeed * Time.deltaTime;
+        else if (goingUp)
+            verticalMove = Mathf.Min(swimVerticalSpeed * Time.deltaTime,
+                Mathf.Max(0f, waterSurface - SurfaceSwimDepth - transform.position.y));
+
+        controller.Move(moveDirection * (swimSpeed * Time.deltaTime) + Vector3.up * verticalMove);
+    }
+
+    float FindWaterSurface()
+    {
+        // A capsule can touch the edge of a trigger while the player is still on shore.
+        Vector3 sample = transform.position + Vector3.up * WaterEntryDepth;
+        float surface = float.NegativeInfinity;
+        foreach (Collider water in waterContacts)
         {
-            verticalInput -= 1f;
+            if (water && water.enabled && water.gameObject.activeInHierarchy &&
+                water.ClosestPoint(sample) == sample)
+                surface = Mathf.Max(surface, water.bounds.max.y);
         }
-
-        Vector3 swimVelocity =
-            moveDirection * swimSpeed +
-            Vector3.up * verticalInput * swimVerticalSpeed;
-
-        controller.Move(swimVelocity * Time.deltaTime);
+        return surface;
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Water"))
-        {
-            isSwimming = true;
-            isJumping = false;
-            verticalVelocity = 0f;
-
-            Debug.Log("Wizard entered water! Swimming enabled.");
-        }
+            waterContacts.Add(other);
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Water"))
-        {
-            isSwimming = false;
-            isJumping = false;
-            verticalVelocity = 0f;
-
-            Debug.Log("Wizard left water! Walking enabled.");
-        }
+        waterContacts.Remove(other);
     }
 }

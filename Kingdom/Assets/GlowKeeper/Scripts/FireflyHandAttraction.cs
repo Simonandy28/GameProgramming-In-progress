@@ -20,9 +20,10 @@ public class FireflyHandAttraction : MonoBehaviour
     public bool IsAtHand { get; private set; }
     public bool IsAtStone { get; private set; }
     public bool HasLeftPlant => attracted;
+    public bool CanAttract => !attracted && player &&
+        Vector3.Distance(player.position, transform.position) <= interactionDistance;
 
     private bool attracted;
-    private bool playerIsNear;
     private Vector3 remainingOffset;
     private float formationSize = 1f;
     private Transform currentTarget;
@@ -42,8 +43,7 @@ public class FireflyHandAttraction : MonoBehaviour
     {
         if (!player || !beeHandTarget || !interactAction) return;
 
-        playerIsNear = !attracted && Vector3.Distance(player.position, transform.position) <= interactionDistance;
-        if (playerIsNear && interactAction.action.WasPressedThisFrame())
+        if (CanAttract && interactAction.action.WasPressedThisFrame())
         {
             attracted = true; // E works only once for this swarm.
             currentTarget = beeHandTarget;
@@ -84,12 +84,5 @@ public class FireflyHandAttraction : MonoBehaviour
         // flight smaller around the hand, preserving its phase, speed and model size.
         foreach (Transform firefly in fireflies)
             if (firefly) firefly.localPosition *= formationSize;
-    }
-
-    private void OnGUI()
-    {
-        if (playerIsNear && !attracted)
-            GUI.Box(new Rect((Screen.width - 320f) / 2f, Screen.height - 90f, 320f, 40f),
-                "Press E to attract fireflies");
     }
 }

@@ -19,11 +19,11 @@ a small blue light; the imported pack is unchanged.
 6. Go near the hovering sword and **tap E** to hold it in your right hand.
 7. **Hold E for one second** to put it into `storedBlades`.
 8. Select `PlayerRoot` during Play and expand **Player Sword Puzzle > Stored
-   Blades** to see the stored sword reference. A small screen counter also appears.
+   Blades** to see the stored sword reference.
 
-The puzzle resets when you stop Play. The array is prototype storage for the
-current Play session, not a disk save system. Holding E through pickup can also
-equip and then store the sword in one long press.
+The puzzle resets when you stop Play. The array stores the sword for the
+current Play session. Release E after picking up the sword, then press and
+hold it again to store the sword.
 
 ## Small scripts, one job each
 

@@ -19,6 +19,7 @@ public class FloatingSword : MonoBehaviour
     private bool landed;
     private Vector3 landingPoint;
     private Vector3 hoverCenter;
+    private Transform followedHand;
 
     public void ReleaseFromStone()
     {
@@ -67,6 +68,12 @@ public class FloatingSword : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, Time.time * 35f, 0f), smooth);
     }
 
+    private void LateUpdate()
+    {
+        if (followedHand)
+            transform.SetPositionAndRotation(followedHand.position, followedHand.rotation);
+    }
+
     public void PickUp(Transform hand)
     {
         StopAllCoroutines();
@@ -74,8 +81,17 @@ public class FloatingSword : MonoBehaviour
         IsHeld = true;
         body.isKinematic = true;
         swordCollider.enabled = false;
-        transform.SetParent(hand, true); // Keep the sword's world size.
-        transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+        // A sword inside a prefab group follows the socket in world space.
+        if (transform.parent)
+        {
+            followedHand = hand;
+            transform.SetPositionAndRotation(hand.position, hand.rotation);
+        }
+        else
+        {
+            transform.SetParent(hand, true); // Keep the sword's world size.
+            transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+        }
         // Stone-placement offsets must not leave the handle floating beside the palm.
         if (swordVisual)
         {
@@ -92,7 +108,13 @@ public class FloatingSword : MonoBehaviour
     public void Store(Transform storage)
     {
         IsHeld = false;
-        transform.SetParent(storage, true);
+        if (followedHand)
+        {
+            followedHand = null;
+            transform.SetPositionAndRotation(storage.position, storage.rotation);
+        }
+        else
+            transform.SetParent(storage, true);
         gameObject.SetActive(false); // The inventory array still remembers it.
     }
 }

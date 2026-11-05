@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9138587188095833780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5049123857929589967}
+  m_Layer: 0
+  m_Name: StoneAndSword
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5049123857929589967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138587188095833780}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5184150136241910716}
+  - {fileID: 1094072027868609239}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2057008063887970275
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5049123857929589967}
+    m_Modifications:
+    - target: {fileID: 1415565532079633716, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.31051636
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415565532079633716, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3843412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415565532079633716, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.059799194
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415565532079633716, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.29613742
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415565532079633716, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.16561121
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415565532079633716, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.052217018
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415565532079633716, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.9392278
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415565532079633716, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415565532079633716, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415565532079633716, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755990821865175569, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+      propertyPath: m_Name
+      value: FrostSwordTreasure
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+--- !u!4 &1094072027868609239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1415565532079633716, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+  m_PrefabInstance: {fileID: 2057008063887970275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7581739775080106372 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8483714932732429927, guid: 390058fba8a22fa4398e7b0ef9de1905, type: 3}
+  m_PrefabInstance: {fileID: 2057008063887970275}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47519649238b9e245993039620308140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloatingSword
+--- !u!1001 &5779549128926318186
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5049123857929589967}
+    m_Modifications:
+    - target: {fileID: 1712731642376732118, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712731642376732118, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712731642376732118, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712731642376732118, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712731642376732118, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712731642376732118, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712731642376732118, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712731642376732118, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712731642376732118, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712731642376732118, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2057873408089122668, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+      propertyPath: m_Name
+      value: MagicStone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549615743067684209, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+      propertyPath: sword
+      value: 
+      objectReference: {fileID: 7581739775080106372}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+--- !u!4 &5184150136241910716 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1712731642376732118, guid: d3365e798d4907a4ba5e0525cb00f3d4, type: 3}
+  m_PrefabInstance: {fileID: 5779549128926318186}
+  m_PrefabAsset: {fileID: 0}

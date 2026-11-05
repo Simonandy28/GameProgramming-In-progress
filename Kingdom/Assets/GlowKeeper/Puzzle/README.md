@@ -13,7 +13,7 @@ position, material and collider are preserved.
    Go within 3 metres of the plant.
 2. Press **E**. The player casts and the three fireflies fly to the right hand.
 3. The plant buzz fades out when they leave. Once they arrive at your hand,
-   a cyan **FIREFLY DETECTOR** bar appears and directional detector buzzing begins.
+   the thin bronze **Whisper of the Swarm** bar appears and directional detector buzzing begins.
 4. Turn the **character** toward the stone and walk closer. The bar fills, and
    the buzz grows louder and higher. Turning only the camera does not change
    the character's facing direction.
@@ -96,7 +96,7 @@ All fields are already connected. If reconnecting them, use:
 | Magic Stone | The renamed rock `MagicStone` in front of the statue |
 | Stone Bee Target | `MagicStone > StoneBeeTarget` |
 | Buzzing | Audio Source on `BeeSwarm` |
-| Detector Meter | `FireflyDetectorCanvas > FireflyDetectorMeter` (Slider) |
+| Detector Meter | `Whispering Fireflies HUD > Whisper of the Swarm` (Slider) |
 | Blue Glow | `MagicStone > MagicStoneBlueGlow` |
 | FireflyHandAttraction / Player | `PlayerRoot` |
 | Bee Hand Target | Existing `Hand.R > BeeHandTarget` |
@@ -152,7 +152,7 @@ allows interaction beside the rock without walking into its collider.
 
 ## Created scene objects and assets
 
-- `FireflyDetectorCanvas`: simple screen-space UI with a non-interactive Slider.
+- `Whispering Fireflies HUD`: screen-space UI with a non-interactive Slider and mission hints.
 - `StoneBeeTarget`: a child of the chosen rock, above its surface.
 - `MagicStoneBlueGlow`: initially inactive; a blue emissive copy of the rock's
   surface and one blue point light, faded in by MagicStoneGlow.cs. It has no

@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,8 @@ public class FireflyStoneDetector : MonoBehaviour
     public AudioSource buzzing;
     public Slider detectorMeter;
     public GameObject blueGlow;
-
+    public Light statueEyeGlow;
+    public AudioSource statueHum;
     [Header("Buzzing at the plant")]
     public AudioSource plantBuzz;
     [Min(0.1f)] public float plantBuzzRange = 14f;
@@ -25,8 +27,11 @@ public class FireflyStoneDetector : MonoBehaviour
     [Range(0.1f, 3f)] public float minPitch = 0.85f;
     [Range(0.1f, 3f)] public float maxPitch = 1.3f;
 
+    // Changed: Check distance to the statue instead of the stone.
+    public bool CanAwakenStone => swarm.IsAtHand && Vector3.Distance(swarm.player.position, stoneBeeTarget.position) <= closeActivationDistance;
+
     private float strength;
-    private float distance;
+    private float StoneDistance => Vector3.Distance(swarm.player.position, magicStone.position);
 
     private void Update()
     {
@@ -34,11 +39,15 @@ public class FireflyStoneDetector : MonoBehaviour
 
         UpdatePlantBuzz();
 
+        if (CanAwakenStone && swarm.interactAction.action.WasPressedThisFrame())
+            swarm.FlyToStone(stoneBeeTarget);
+
         // The detector works only while the bees are at the player's hand.
         bool searching = swarm.IsAtHand;
         if (detectorMeter) detectorMeter.gameObject.SetActive(searching);
         if (blueGlow && swarm.IsAtStone) blueGlow.SetActive(true);
-
+        if (statueEyeGlow) statueEyeGlow.enabled = swarm.IsAtStone;
+        if (statueHum && swarm.IsAtStone && !statueHum.isPlaying) statueHum.Play();
         if (!searching)
         {
             strength = 0f;
@@ -46,12 +55,11 @@ public class FireflyStoneDetector : MonoBehaviour
             return;
         }
 
-        distance = Vector3.Distance(swarm.player.position, magicStone.position);
         Vector3 direction = magicStone.position - swarm.player.position;
         direction.y = 0f; // Look left/right, not up/down at the ground.
         float facing = direction.sqrMagnitude < 0.001f ? 1f :
             Mathf.Clamp01(Vector3.Dot(swarm.player.forward, direction.normalized));
-        float proximity = 1f - Mathf.Clamp01(distance / detectionRange);
+        float proximity = 1f - Mathf.Clamp01(StoneDistance / detectionRange);
         float wantedStrength = facing * proximity;
 
         // Smooth one signal, then use it for both sound and the bar.
@@ -63,9 +71,6 @@ public class FireflyStoneDetector : MonoBehaviour
             buzzing.pitch = Mathf.Lerp(minPitch, maxPitch, strength);
             if (!buzzing.isPlaying) buzzing.Play();
         }
-
-        if (distance <= closeActivationDistance && swarm.interactAction.action.WasPressedThisFrame())
-            swarm.FlyToStone(stoneBeeTarget);
     }
 
     private void UpdatePlantBuzz()
@@ -81,13 +86,6 @@ public class FireflyStoneDetector : MonoBehaviour
             if (!plantBuzz.isPlaying) plantBuzz.Play();
         }
         else if (plantBuzz.isPlaying) plantBuzz.Stop();
-    }
-
-    private void OnGUI()
-    {
-        if (swarm && swarm.IsAtHand && distance <= closeActivationDistance)
-            GUI.Box(new Rect((Screen.width - 360f) / 2f, Screen.height - 90f, 360f, 40f),
-                "Press E to activate the magic stone");
     }
 
     private void OnDisable()

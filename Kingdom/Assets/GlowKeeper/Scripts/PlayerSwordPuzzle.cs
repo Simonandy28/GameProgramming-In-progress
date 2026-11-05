@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[DefaultExecutionOrder(10)]
 public class PlayerSwordPuzzle : MonoBehaviour
 {
     public CrackableMagicStone stone;
@@ -19,37 +20,66 @@ public class PlayerSwordPuzzle : MonoBehaviour
     public GameObject[] storedBlades = new GameObject[8];
     public int storedBladeCount;
     public bool IsAttacking { get; private set; }
+    public bool CanClaimSword => !IsAttacking && sword && sword.IsHovering &&
+        Vector3.Distance(transform.position, sword.transform.position) <= pickupRange;
 
     private float heldTime;
+    private bool holdingToStore;
     private Coroutine strikeRoutine;
+    private ThirdPersonAvatarController movement;
+
+    private void Awake()
+    {
+        movement = GetComponent<ThirdPersonAvatarController>();
+    }
 
     private void OnEnable()
     {
         if (attackAction) attackAction.action.Enable();
+        if (interactAction) interactAction.action.Enable();
     }
 
     private void Update()
     {
-        // Left click always attacks in the direction the player is facing.
-        // Another click restarts the combo instead of being ignored.
-        if (attackAction.action.WasPressedThisFrame())
+        if (movement && movement.IsSwimming)
+        {
+            // Entering the water also cancels a swing started on land.
+            if (IsAttacking)
+            {
+                StopCoroutine(strikeRoutine);
+                ClearStrike();
+                animator.Play("Firefly Casting.Ready", animator.GetLayerIndex("Firefly Casting"), 0f);
+            }
+        }
+        else if (attackAction && attackAction.action.WasPressedThisFrame())
         {
             if (strikeRoutine != null) StopCoroutine(strikeRoutine);
             strikeRoutine = StartCoroutine(Strike());
         }
-        if (IsAttacking) return;
+        if (sword && interactAction) UpdateSwordInput();
+    }
 
-        bool nearSword = Vector3.Distance(transform.position, sword.transform.position) <= pickupRange;
-        if (sword.IsHovering && nearSword && interactAction.action.WasPressedThisFrame())
-            sword.PickUp(swordHandTarget);
-
-        // A tap equips the sword. Holding E for a second puts it in the array.
-        if (sword.IsHeld && interactAction.action.IsPressed())
+    private void UpdateSwordInput()
+    {
+        // A new press either picks up the sword or begins a storage hold.
+        if (!IsAttacking && interactAction.action.WasPressedThisFrame())
         {
-            heldTime += Time.deltaTime;
-            if (heldTime >= storeHoldTime) StoreSword();
+            if (CanClaimSword) sword.PickUp(swordHandTarget);
+            else if (sword.IsHeld) holdingToStore = true;
         }
-        else heldTime = 0f;
+
+        if (IsAttacking || !interactAction.action.IsPressed())
+        {
+            holdingToStore = false;
+            heldTime = 0f;
+        }
+        if (!holdingToStore) return;
+
+        heldTime += Time.deltaTime;
+        if (heldTime < storeHoldTime) return;
+        StoreSword();
+        holdingToStore = false;
+        heldTime = 0f;
     }
 
     private IEnumerator Strike()
@@ -59,6 +89,11 @@ public class PlayerSwordPuzzle : MonoBehaviour
         int layer = animator.GetLayerIndex("Firefly Casting");
         animator.Play("Firefly Casting.Strike Magic Stone", layer, 0f);
         yield return new WaitForSeconds(comboDuration + 0.3f);
+        ClearStrike();
+    }
+
+    private void ClearStrike()
+    {
         strikeEvents.striking = false;
         IsAttacking = false;
         strikeRoutine = null;
@@ -72,20 +107,8 @@ public class PlayerSwordPuzzle : MonoBehaviour
             storedBlades[i] = sword.gameObject;
             storedBladeCount++;
             sword.Store(storage);
-            heldTime = 0f;
             return;
         }
-    }
-
-    private void OnGUI()
-    {
-        string message = "";
-        if (!stone.IsBroken && stone.detector.swarm.IsAtStone && Vector3.Distance(transform.position, stone.transform.position) <= attackRange)
-            message = IsAttacking ? "Attacking..." : "Face the stone and left click to strike";
-        if (sword.IsHovering && Vector3.Distance(transform.position, sword.transform.position) <= pickupRange) message = "Tap E to hold the sword";
-        if (sword.IsHeld) message = storedBladeCount >= storedBlades.Length ? "Blade storage is full" : "Hold E for 1 second to store the sword";
-        if (message != "") GUI.Box(new Rect((Screen.width - 390f) / 2f, Screen.height - 90f, 390f, 40f), message);
-        if (storedBladeCount > 0) GUI.Box(new Rect(Screen.width - 200f, 20f, 180f, 35f), "Stored blades: " + storedBladeCount + "/" + storedBlades.Length);
     }
 
     private void OnDisable()
@@ -94,9 +117,7 @@ public class PlayerSwordPuzzle : MonoBehaviour
         if (IsAttacking)
         {
             StopAllCoroutines();
-            strikeEvents.striking = false;
-            IsAttacking = false;
-            strikeRoutine = null;
+            ClearStrike();
         }
     }
 }

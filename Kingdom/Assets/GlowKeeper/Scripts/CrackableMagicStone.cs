@@ -16,16 +16,17 @@ public class CrackableMagicStone : MonoBehaviour
     public bool IsBroken { get; private set; }
     public int Hits { get; private set; }
 
-    public void TakeHit()
+    public void TakeHit(CharacterController playerCollider = null)
     {
-        if (IsBroken || !detector.swarm.IsAtStone) return;
+        // A test scene can use the stone without setting up the fireflies.
+        if (IsBroken || (detector && (!detector.swarm || !detector.swarm.IsAtStone))) return;
         Hits++;
         impactAudio.PlayOneShot(hitSound);
-        if (Hits >= hitsToBreak) BreakStone();
+        if (Hits >= hitsToBreak) BreakStone(playerCollider);
         else if (Hits - 1 < crackStages.Length) crackStages[Hits - 1].SetActive(true);
     }
 
-    private void BreakStone()
+    private void BreakStone(CharacterController playerCollider)
     {
         IsBroken = true;
         solidCollider.enabled = false;
@@ -33,17 +34,19 @@ public class CrackableMagicStone : MonoBehaviour
         foreach (Renderer surface in stoneRenderers) surface.enabled = false;
         foreach (GameObject cracks in crackStages) cracks.SetActive(false);
         // Detection is finished. Leave the swarm and its target alive.
-        detector.enabled = false;
-        detector.blueGlow.SetActive(false);
+        if (detector)
+        {
+            detector.enabled = false;
+            if (detector.blueGlow) detector.blueGlow.SetActive(false);
+        }
         rubble.SetActive(true);
-        sword.ReleaseFromStone();
+        if (sword) sword.ReleaseFromStone();
         var pieces = rubble.GetComponentsInChildren<Rigidbody>();
-        var playerCollider = detector.swarm.player.GetComponent<CharacterController>();
         foreach (Rigidbody piece in pieces)
         {
             var collider = piece.GetComponent<Collider>();
-            Physics.IgnoreCollision(collider, playerCollider);
-            Physics.IgnoreCollision(collider, sword.swordCollider);
+            if (playerCollider) Physics.IgnoreCollision(collider, playerCollider);
+            if (sword) Physics.IgnoreCollision(collider, sword.swordCollider);
             foreach (Rigidbody other in pieces)
                 if (other != piece) Physics.IgnoreCollision(collider, other.GetComponent<Collider>());
             piece.isKinematic = false;
