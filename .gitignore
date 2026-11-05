@@ -108,3 +108,5 @@ InitTestScene*.unity*
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
 Kingdom/Assets/GlowKeeper/ForestSettings/Tenkoku/mat_cloudSphere.mat
+Kingdom/SetupBackup/
+Kingdom/AgentScripts/
