@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -18,13 +19,33 @@ public class FirstPuzzleMission : MonoBehaviour
 
     private enum Stage { Approach, FindFireflies, FollowSwarm, BreakStone, ClaimSword, Complete }
     private Stage stage;
-    private Coroutine subtitleRoutine;
+    private readonly Queue<(string text, float seconds)> subtitles = new Queue<(string, float)>();
+    public bool IsShowingSubtitle { get; private set; }
+    private RectTransform subtitlePanel;
+    private float panelHeight;
+    private float textHeight;
+
+    private void Awake()
+    {
+        subtitlePanel = (RectTransform)subtitleGroup.transform;
+        panelHeight = subtitlePanel.rect.height;
+        textHeight = subtitle.rectTransform.rect.height;
+        subtitle.textWrappingMode = TextWrappingModes.Normal;
+    }
 
     private void LateUpdate()
     {
         CheckProgress();
         UpdateObjectiveVisibility();
         UpdatePrompt();
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+        subtitles.Clear();
+        IsShowingSubtitle = false;
+        if (subtitleGroup) subtitleGroup.alpha = 0f;
     }
 
     // Read the existing puzzle's results. This script never handles input.
@@ -94,7 +115,7 @@ public class FirstPuzzleMission : MonoBehaviour
             message = "Face the stone and left click to strike.";
         else if (player.CanClaimSword)
             message = "Press E to claim the sword.";
-        else if (player.sword.IsHeld)
+        else if (player.HeldSword)
             message = player.storedBladeCount < player.storedBlades.Length
                 ? "Hold E again to store the sword." : "Blade storage is full.";
 
@@ -104,22 +125,33 @@ public class FirstPuzzleMission : MonoBehaviour
 
     private void Say(params string[] lines)
     {
-        if (subtitleRoutine != null) StopCoroutine(subtitleRoutine);
-        subtitleRoutine = StartCoroutine(ShowSubtitles(lines));
+        foreach (string line in lines) subtitles.Enqueue((line, 3f));
+        if (!IsShowingSubtitle) StartCoroutine(ShowSubtitles());
+    }
+
+    public void SayQuestHint(string line)
+    {
+        subtitles.Enqueue((line, 5f));
+        if (!IsShowingSubtitle) StartCoroutine(ShowSubtitles());
     }
 
     // Time controls only the text fading. Gameplay decides the mission stage.
-    private IEnumerator ShowSubtitles(string[] lines)
+    private IEnumerator ShowSubtitles()
     {
+        IsShowingSubtitle = true;
         subtitleGroup.alpha = 0f;
-        foreach (string line in lines)
+        while (subtitles.Count > 0)
         {
-            subtitle.text = line;
+            var (text, seconds) = subtitles.Dequeue();
+            subtitle.text = text;
+            float extraHeight = Mathf.Max(0f, subtitle.preferredHeight + 8f - textHeight);
+            subtitle.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, textHeight + extraHeight);
+            subtitlePanel.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, panelHeight + extraHeight);
             yield return FadeTo(1f);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(seconds);
             yield return FadeTo(0f);
         }
-        subtitleRoutine = null;
+        IsShowingSubtitle = false;
     }
 
     private IEnumerator FadeTo(float alpha)

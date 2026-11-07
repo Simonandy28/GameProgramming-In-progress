@@ -16,7 +16,7 @@ public class SwordHandGrip : MonoBehaviour
 
     private void LateUpdate()
     {
-        var heldSword = player && player.sword ? player.sword : sword;
+        var heldSword = player ? player.HeldSword : sword;
         if (!heldSword || !heldSword.IsHeld) return;
         for (int i = 0; i < fingers.Length; i++)
             fingers[i].localRotation = closedRotations[i];

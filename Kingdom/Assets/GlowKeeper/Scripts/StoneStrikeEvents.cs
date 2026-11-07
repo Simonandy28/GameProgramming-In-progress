@@ -11,7 +11,6 @@ public class StoneStrikeEvents : MonoBehaviour
     private ThirdPersonAvatarController movement;
     private PlayerSwordPuzzle player;
     private float treadWeight;
-    private CrackableMagicStone CurrentStone => player && player.stone ? player.stone : stone;
 
     private void Awake()
     {
@@ -21,14 +20,28 @@ public class StoneStrikeEvents : MonoBehaviour
 
     public void HitStone()
     {
-        var target = CurrentStone;
-        if (!striking || !player || !target || target.IsBroken || (movement && movement.IsSwimming)) return;
+        if (!striking || !player || (movement && movement.IsSwimming)) return;
+        var target = FindNearbyStone();
+        if (!target) return;
+
         Vector3 direction = target.transform.position - player.transform.position;
         direction.y = 0f;
-        bool near = Vector3.Distance(player.transform.position, target.transform.position) <= player.attackRange;
-        bool facing = Vector3.Dot(player.transform.forward, direction.normalized) > 0.5f;
         // The animation works anywhere. Only a nearby, correctly aimed hit damages the stone.
-        if (near && facing) target.TakeHit(player.GetComponent<CharacterController>());
+        if (Vector3.Dot(player.transform.forward, direction.normalized) > 0.5f)
+            target.TakeHit(player.GetComponent<CharacterController>());
+    }
+
+    private CrackableMagicStone FindNearbyStone()
+    {
+        if (IsNearby(player.tigerStone)) return player.tigerStone;
+        var firstStone = player.stone ? player.stone : stone;
+        return IsNearby(firstStone) ? firstStone : null;
+    }
+
+    private bool IsNearby(CrackableMagicStone target)
+    {
+        return target && !target.IsBroken &&
+            Vector3.Distance(player.transform.position, target.transform.position) <= player.attackRange;
     }
 
     private void OnAnimatorIK(int layerIndex)
@@ -51,8 +64,9 @@ public class StoneStrikeEvents : MonoBehaviour
             return;
         }
 
-        var target = CurrentStone;
-        if (!striking || !target || target.IsBroken || !target.solidCollider.enabled) return;
+        if (!striking || !player) return;
+        var target = FindNearbyStone();
+        if (!target || !target.solidCollider.enabled) return;
         KeepHandOutside(AvatarIKGoal.RightHand, HumanBodyBones.RightUpperArm, target.solidCollider);
         KeepHandOutside(AvatarIKGoal.LeftHand, HumanBodyBones.LeftUpperArm, target.solidCollider);
     }

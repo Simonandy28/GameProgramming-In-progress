@@ -7,6 +7,7 @@ public class PlayerSwordPuzzle : MonoBehaviour
 {
     public CrackableMagicStone stone;
     public FloatingSword sword;
+    public CrackableMagicStone tigerStone;
     public StoneStrikeEvents strikeEvents;
     public Animator animator;
     public InputActionReference attackAction;
@@ -20,8 +21,13 @@ public class PlayerSwordPuzzle : MonoBehaviour
     public GameObject[] storedBlades = new GameObject[8];
     public int storedBladeCount;
     public bool IsAttacking { get; private set; }
-    public bool CanClaimSword => !IsAttacking && sword && sword.IsHovering &&
-        Vector3.Distance(transform.position, sword.transform.position) <= pickupRange;
+    public bool CanClaimSword => !IsAttacking && !HeldSword && ClaimableSword;
+    public FloatingSword HeldSword => sword && sword.IsHeld ? sword :
+        TigerSword && TigerSword.IsHeld ? TigerSword : null;
+
+    private FloatingSword TigerSword => tigerStone ? tigerStone.sword : null;
+    private FloatingSword ClaimableSword => IsCloseEnoughToPickUp(sword) ? sword :
+        IsCloseEnoughToPickUp(TigerSword) ? TigerSword : null;
 
     private float heldTime;
     private bool holdingToStore;
@@ -56,7 +62,13 @@ public class PlayerSwordPuzzle : MonoBehaviour
             if (strikeRoutine != null) StopCoroutine(strikeRoutine);
             strikeRoutine = StartCoroutine(Strike());
         }
-        if (sword && interactAction) UpdateSwordInput();
+        if (interactAction) UpdateSwordInput();
+    }
+
+    private bool IsCloseEnoughToPickUp(FloatingSword blade)
+    {
+        return blade && blade.IsHovering &&
+            Vector3.Distance(transform.position, blade.transform.position) <= pickupRange;
     }
 
     private void UpdateSwordInput()
@@ -64,8 +76,12 @@ public class PlayerSwordPuzzle : MonoBehaviour
         // A new press either picks up the sword or begins a storage hold.
         if (!IsAttacking && interactAction.action.WasPressedThisFrame())
         {
-            if (CanClaimSword) sword.PickUp(swordHandTarget);
-            else if (sword.IsHeld) holdingToStore = true;
+            if (HeldSword) holdingToStore = true;
+            else
+            {
+                var blade = ClaimableSword;
+                if (blade) blade.PickUp(swordHandTarget);
+            }
         }
 
         if (IsAttacking || !interactAction.action.IsPressed())
@@ -77,7 +93,7 @@ public class PlayerSwordPuzzle : MonoBehaviour
 
         heldTime += Time.deltaTime;
         if (heldTime < storeHoldTime) return;
-        StoreSword();
+        StoreSword(HeldSword);
         holdingToStore = false;
         heldTime = 0f;
     }
@@ -99,14 +115,15 @@ public class PlayerSwordPuzzle : MonoBehaviour
         strikeRoutine = null;
     }
 
-    private void StoreSword()
+    private void StoreSword(FloatingSword blade)
     {
+        if (!blade) return;
         for (int i = 0; i < storedBlades.Length; i++)
         {
             if (storedBlades[i]) continue;
-            storedBlades[i] = sword.gameObject;
+            storedBlades[i] = blade.gameObject;
             storedBladeCount++;
-            sword.Store(storage);
+            blade.Store(storage);
             return;
         }
     }
