@@ -84,11 +84,10 @@ public class TowerBehavior : MonoBehaviour
     void Shoot()
     {
         GameObject arrowGO = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
-        
         Projectile_Arrow arrow = arrowGO.GetComponent<Projectile_Arrow>();
         if (arrow != null)
         {   
-            arrow.Initiate(currentTarget.transform, damage);
+            arrow.Initiate(currentTarget.GetComponent<BasicUnit>().aimPoint, damage);
         }
     }
 

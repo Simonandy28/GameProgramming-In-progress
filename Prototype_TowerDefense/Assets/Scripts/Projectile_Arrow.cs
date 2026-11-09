@@ -36,7 +36,7 @@ public class Projectile_Arrow : MonoBehaviour
 
     void HitTarget()
     {
-        BasicUnit basicUnit = target.GetComponent<BasicUnit>();
+        BasicUnit basicUnit = target.GetComponentInParent<BasicUnit>();
 
         if (basicUnit != null)
         {

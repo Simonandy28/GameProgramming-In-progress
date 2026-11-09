@@ -9,6 +9,7 @@ TagManager:
   - HealerUnitType
   - FighterUnitType
   - MageUnitType
+  - DestroyedTower
   layers:
   - Default
   - TransparentFX
