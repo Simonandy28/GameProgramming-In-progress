@@ -7,26 +7,41 @@ public class TowerBehavior : MonoBehaviour
     [Header("Setup Fields")]
     public GameObject arrowPrefab;
     public Transform firePoint;
+    public GameObject inactiveVisual;
+    public GameObject activeVisual;
+    public Collider inactiveCollider;
+    public Collider activeCollider;
+
 
     [Header("Tower Stats")]
     // Shots per seconds
     public float fireRate = 1f;
     public int damage = 10;
+    public int towerHitPoints = 100;
 
-    private SphereCollider sphereCollider;
+    private SphereCollider shootingRangeCollider;
     private List<GameObject> enemyUnitsInRange = new List<GameObject>();
     private GameObject currentTarget;
     private float fireCountdown = 0f;
+    private bool isDestroyed = false;
 
     void Start()
     {
-        sphereCollider = GetComponent<SphereCollider>();
-        sphereCollider.isTrigger = true;
+        activeVisual.SetActive(true);
+        inactiveVisual.SetActive(false);
+
+        activeCollider.enabled = true;
+        inactiveCollider.enabled = false;
+
+        shootingRangeCollider = GetComponent<SphereCollider>();
+        shootingRangeCollider.isTrigger = true;
         
     }
 
     void Update()
     {
+        if (isDestroyed) return;
+
         CleanUpUnitsInRange();
         currentTarget = GetNearestTarger();
 
@@ -39,7 +54,6 @@ public class TowerBehavior : MonoBehaviour
             }
         }
         fireCountdown -= Time.deltaTime;
-        
     }
 
     void CleanUpUnitsInRange()
@@ -80,7 +94,7 @@ public class TowerBehavior : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag(gameObject.tag))
+        if ((gameObject.tag == "Ally" && other.CompareTag("Enemy")) || (gameObject.tag == "Enemy" && other.CompareTag("Ally")))
         {
             enemyUnitsInRange.Add(other.gameObject);
         }
@@ -92,5 +106,29 @@ public class TowerBehavior : MonoBehaviour
         {
             enemyUnitsInRange.Remove(other.gameObject);
         }
+    }
+
+    public void CalculateDamage(int damageAmount)
+    {
+        towerHitPoints -= damageAmount;
+        if (towerHitPoints <= 0)
+        {
+            DestroyTower();
+        }
+    }
+
+    void DestroyTower()
+    {
+        isDestroyed = true;
+        inactiveVisual.SetActive(true);
+        activeVisual.SetActive(false);
+
+        activeCollider.enabled = false;
+        if (inactiveCollider != null) 
+        {
+            inactiveCollider.enabled = true;
+        }
+
+        gameObject.tag = "DestroyedTower";
     }
 }
