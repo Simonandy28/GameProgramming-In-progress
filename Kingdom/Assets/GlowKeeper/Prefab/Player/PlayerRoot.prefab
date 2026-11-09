@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4973384371686202774}
   - component: {fileID: 8620703327563632990}
   - component: {fileID: 7820697765888584260}
+  - component: {fileID: 4007835715717186188}
   m_Layer: 0
   m_Name: PlayerRoot
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 91831223676657469}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.77819526, z: -0, w: 0.6280223}
-  m_LocalPosition: {x: 147.29, y: 16.229, z: 191.21}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSwordPuzzle
   stone: {fileID: 0}
   sword: {fileID: 0}
+  tigerStone: {fileID: 0}
   strikeEvents: {fileID: 1670313617357022680}
   animator: {fileID: 6715034067711344044}
   attackAction: {fileID: -2016856641534807931, guid: 03dc6fa43df7bb84b8ea37ad13e662ef, type: 3}
@@ -120,6 +122,20 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   storedBladeCount: 0
+--- !u!114 &4007835715717186188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91831223676657469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247032dde76727345ab9efb0f44e5b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  maxHP: 10
+  currentHP: 0
 --- !u!1 &1243011575962744934
 GameObject:
   m_ObjectHideFlags: 0
