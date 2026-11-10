@@ -152628,8 +152628,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9203603020710262027, guid: ca00d4d4c0d329e4599915fdd324475f, type: 3}
   m_PrefabInstance: {fileID: 2147034283}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &3000000051 stripped
-CapsuleCollider:
+--- !u!64 &3000000051 stripped
+MeshCollider:
   m_CorrespondingSourceObject: {fileID: 385822468793205299, guid: 551318fcbd7a45648a7f4edcab72a794, type: 3}
   m_PrefabInstance: {fileID: 3745784837548588345}
   m_PrefabAsset: {fileID: 0}

@@ -11,19 +11,17 @@ public class Puzzle3Crystal : MonoBehaviour
 
     public bool Offered { get; private set; }
     public bool IsCarried => collected && !Offered;
+    public bool CanInteract => isActiveAndEnabled && !Offered &&
+        ritual && ritual.IsActive && player && hand && plate && offeringLight && interact &&
+        Vector3.Distance(player.position, (collected ? plate : transform).position) <= 3f;
     private bool collected;
     private static int lastInteractionFrame = -1;
 
     private void Update()
     {
-        if (Offered || !ritual || !player || !hand || !plate ||
-            !offeringLight || !interact || !ritual.IsActive ||
+        if (!CanInteract ||
             lastInteractionFrame == Time.frameCount ||
             !interact.action.WasPressedThisFrame()) return;
-
-        Transform target = collected ? plate : transform;
-        if (Vector3.Distance(player.position, target.position) > 3f)
-            return;
 
         // Only one crystal can use this E press.
         lastInteractionFrame = Time.frameCount;

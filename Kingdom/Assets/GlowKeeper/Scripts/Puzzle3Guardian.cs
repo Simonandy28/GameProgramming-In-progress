@@ -7,6 +7,7 @@ public class Puzzle3Guardian : MonoBehaviour
     [SerializeField] private Puzzle3Ritual ritual;
     [SerializeField] private Light guardianLight;
     [SerializeField] private AudioSource hum;
+    [SerializeField] private AudioSource mechanismAudio;
     [SerializeField] private GameObject platforms;
     [SerializeField] private FirstPuzzleMission guidance;
     [SerializeField] private PlayerSwordPuzzle player;
@@ -28,6 +29,24 @@ public class Puzzle3Guardian : MonoBehaviour
         if (platforms) platforms.SetActive(false);
         if (player) walker = player.GetComponent<CharacterController>();
         if (poison) water = poison.GetComponent<BoxCollider>();
+        if (guidance) guidance.RegisterCrystalGuardian(this);
+    }
+
+    public bool TryGetInteractionHint(out string message)
+    {
+        if (crystals != null)
+        {
+            foreach (Puzzle3Crystal crystal in crystals)
+            {
+                if (!crystal || !crystal.CanInteract) continue;
+                message = crystal.IsCarried
+                    ? "Press E to offer the crystal at its sacred altar."
+                    : "Press E to collect the moonlit crystal.";
+                return true;
+            }
+        }
+        message = "";
+        return false;
     }
 
     private void Update()
@@ -42,6 +61,7 @@ public class Puzzle3Guardian : MonoBehaviour
         if (guardianLight) guardianLight.enabled = true;
         if (hum) hum.Play();
         if (platforms) platforms.SetActive(true);
+        if (mechanismAudio) mechanismAudio.Play();
         if (guidance) guidance.SayQuestHint("The three lights unite, and the ancient guardian awakens. Beyond the altar, a path rises from the poisoned depths.");
         Debug.Log("Puzzle 3 Guardian Activated!");
     }

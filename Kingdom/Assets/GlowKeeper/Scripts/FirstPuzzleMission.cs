@@ -25,6 +25,7 @@ public class FirstPuzzleMission : MonoBehaviour
     private float panelHeight;
     private float textHeight;
     private SecondPuzzleMission secondPuzzle;
+    private Puzzle3Guardian crystalGuardian;
     private RectTransform hintPanel;
     private Vector2 hintSize, hintPosition, hintTextSize;
     private TextWrappingModes hintWrapping;
@@ -37,7 +38,7 @@ public class FirstPuzzleMission : MonoBehaviour
         textHeight = subtitle.rectTransform.rect.height;
         subtitle.textWrappingMode = TextWrappingModes.Normal;
         secondPuzzle = GetComponent<SecondPuzzleMission>();
-        if (secondPuzzle && prompt)
+        if (prompt)
         {
             hintPanel = (RectTransform)prompt.transform.parent;
             hintSize = hintPanel.sizeDelta;
@@ -46,6 +47,8 @@ public class FirstPuzzleMission : MonoBehaviour
             hintWrapping = prompt.textWrappingMode;
         }
     }
+
+    public void RegisterCrystalGuardian(Puzzle3Guardian guardian) => crystalGuardian = guardian;
 
     private void LateUpdate()
     {
@@ -120,7 +123,7 @@ public class FirstPuzzleMission : MonoBehaviour
     private void UpdatePrompt()
     {
         string message = "";
-        bool puzzleTwoHint = false;
+        bool crystalHint = false;
         if (detector.swarm.CanAttract)
             message = "Press E to attract the fireflies.";
         else if (detector.CanAwakenStone)
@@ -129,7 +132,9 @@ public class FirstPuzzleMission : MonoBehaviour
             Vector3.Distance(player.transform.position, player.stone.transform.position) <= player.attackRange)
             message = "Face the stone and left click to strike.";
         else if (secondPuzzle && secondPuzzle.isActiveAndEnabled && secondPuzzle.TryGetInteractionHint(out message))
-            puzzleTwoHint = true;
+            crystalHint = true;
+        else if (crystalGuardian && crystalGuardian.isActiveAndEnabled && crystalGuardian.TryGetInteractionHint(out message))
+            crystalHint = true;
         else if (player.CanClaimSword)
             message = player.CanClaimCursedBlade
                 ? "Press E to claim the Cursed Blade." : "Press E to claim the sword.";
@@ -139,9 +144,9 @@ public class FirstPuzzleMission : MonoBehaviour
             message =  "Hold E again to store the sword.";
 
         // Give the longer crystal hints two lines, then restore the normal prompt layout.
-        if (hintPanel && wideHint != puzzleTwoHint)
+        if (hintPanel && wideHint != crystalHint)
         {
-            wideHint = puzzleTwoHint;
+            wideHint = crystalHint;
             hintPanel.sizeDelta = wideHint ? new Vector2(760f, 68f) : hintSize;
             hintPanel.anchoredPosition = wideHint ? hintPosition + Vector2.down * 25f : hintPosition;
             prompt.rectTransform.sizeDelta = wideHint ? new Vector2(706f, 60f) : hintTextSize;
