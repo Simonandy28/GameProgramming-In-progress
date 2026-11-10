@@ -26,6 +26,7 @@ public class PlayerSwordPuzzle : MonoBehaviour
     public bool CanClaimSword => !IsAttacking && !HeldSword && ClaimableSword;
     public bool CanClaimCursedBlade => cursedSword && CanClaimSword && ClaimableSword == cursedSword;
     public bool IsHoldingCursedBlade => cursedSword && cursedSword.IsHeld;
+    public bool CarryingUnsecuredCursedBlade => IsHoldingCursedBlade && !cursedBladeSecured;
     public FloatingSword HeldSword
     {
         get
@@ -71,6 +72,7 @@ public class PlayerSwordPuzzle : MonoBehaviour
     }
     private float heldTime;
     private bool holdingToStore;
+    private bool cursedBladeSecured;
     private Coroutine strikeRoutine;
     private ThirdPersonAvatarController movement;
 
@@ -124,7 +126,7 @@ public class PlayerSwordPuzzle : MonoBehaviour
         // A new press either picks up the sword or begins a storage hold.
         if (!IsAttacking && interactAction.action.WasPressedThisFrame())
         {
-            if (HeldSword) holdingToStore = true;
+            if (HeldSword) holdingToStore = !CarryingUnsecuredCursedBlade;
             else
             {
                 FloatingSword blade = ClaimableSword;
@@ -174,6 +176,19 @@ public class PlayerSwordPuzzle : MonoBehaviour
 
         storedBlades.Add(blade);
         blade.Store(storage);
+    }
+
+    public void SecureCursedBlade()
+    {
+        if (IsHoldingCursedBlade) cursedBladeSecured = true;
+    }
+
+    public void LoseUnsecuredCursedBlade()
+    {
+        if (!CarryingUnsecuredCursedBlade) return;
+        cursedSword.ReturnToStand();
+        holdingToStore = false;
+        heldTime = 0f;
     }
 
     private void OnDisable()

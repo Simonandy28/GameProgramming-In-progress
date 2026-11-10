@@ -9,7 +9,7 @@ namespace GlowKeeper.Editor
         public override void OnInspectorGUI()
         {
             var schedule=(TenkokuForestSchedule)target;
-            EditorGUILayout.HelpBox("Starts at sunrise, then passes through morning, noon, afternoon, sunset and night. Tenkoku drives the sun, moon and stars, and the date advances every full cycle.",MessageType.Info);
+            EditorGUILayout.HelpBox("Start Offset Minutes selects where the clock begins in the cycle. Tenkoku drives the sun, moon and stars, and the date advances every full cycle.",MessageType.Info);
             DrawDefaultInspector();
             EditorGUILayout.LabelField("Loop length",$"{schedule.LoopSeconds/60:g} gameplay minutes");
             using(new EditorGUI.DisabledScope(!schedule.isActiveAndEnabled))

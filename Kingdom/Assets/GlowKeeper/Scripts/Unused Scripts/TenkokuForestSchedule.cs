@@ -24,6 +24,8 @@ namespace GlowKeeper
         [Header("Sky clock and moonlit visibility")]
         [FormerlySerializedAs("sunsetStartHour")]
         [Range(0,24)] public float sunriseStartHour = 6f;
+        [SerializeField, Min(0f), Tooltip("Gameplay minutes into the cycle when the scene starts.")]
+        private float startOffsetMinutes;
         public int skyYear = 2019, skyMonth = 3, skyDay = 21;
         [Min(0)] public float minimumMoonIntensity = 0.4f;
         public Color nightSkyFill = new Color(0.24f, 0.29f, 0.39f);
@@ -95,7 +97,7 @@ namespace GlowKeeper
                 var material = daylightRays[i].sharedMaterial;
                 rayColors[i] = material && material.HasProperty("_BaseColor") ? material.GetColor("_BaseColor") : Color.white;
             }
-            SetElapsedTime(0);
+            SetElapsedTime(Math.Max(0, startOffsetMinutes) * 60.0);
         }
 
         private void Update()

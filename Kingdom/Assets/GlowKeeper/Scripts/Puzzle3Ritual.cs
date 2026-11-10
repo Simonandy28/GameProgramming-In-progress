@@ -10,6 +10,7 @@ public class Puzzle3Ritual : MonoBehaviour
     public bool PlayerOnPlate => playerOnPlate;
     private bool playerOnPlate;
     private bool activated;
+    private bool keepPlateLit;
 
     private bool IsNight => sun && sun.transform.forward.y > 0;
 
@@ -19,17 +20,19 @@ public class Puzzle3Ritual : MonoBehaviour
     }
 
     private void Update()
-{
-    if (!IsNight)
-        activated = false;
-    else if (playerOnPlate)
-        activated = true;
+    {
+        if (!IsNight)
+            activated = false;
+        else if (playerOnPlate)
+            activated = true;
 
-    SetLights(activated);
+        SetLights(activated);
 
-    if (plateLight)
-        plateLight.enabled = playerOnPlate && IsNight;
-}
+        if (plateLight)
+            plateLight.enabled = activated || keepPlateLit;
+    }
+
+    public void KeepPlateLit() => keepPlateLit = true;
 
     private void OnTriggerEnter(Collider other)
     {

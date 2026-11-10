@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle3MovingPillar
   sinkDistance: 4
-  delay: 2.4
+  delay: -4
 --- !u!1 &714463403271983737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,7 +1561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle3MovingPillar
   sinkDistance: 4
-  delay: 1.8
+  delay: -3
 --- !u!1 &4281323901748190804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,7 +1942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle3MovingPillar
   sinkDistance: 4
-  delay: 1.2
+  delay: -2
 --- !u!1 &5959291260800595828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2203,7 +2203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle3MovingPillar
   sinkDistance: 4
-  delay: 0
+  delay: -4.6
 --- !u!1 &6286333857566054201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,7 +2332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle3MovingPillar
   sinkDistance: 4
-  delay: 2.4
+  delay: 0
 --- !u!1 &6404749096593470503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,7 +2461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle3MovingPillar
   sinkDistance: 4
-  delay: 0.6
+  delay: -1
 --- !u!1 &6620310695350946921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,7 +2722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle3MovingPillar
   sinkDistance: 4
-  delay: 1.2
+  delay: -2.3
 --- !u!1 &7149111384595394419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3231,7 +3231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle3MovingPillar
   sinkDistance: 4
-  delay: 0.6
+  delay: -3.45
 --- !u!1 &8959709429892896199
 GameObject:
   m_ObjectHideFlags: 0
@@ -3360,7 +3360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle3MovingPillar
   sinkDistance: 4
-  delay: 1.8
+  delay: -1.15
 --- !u!1 &9165313950486447365
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,7 +3657,12 @@ MonoBehaviour:
   player: {fileID: 0}
   poison: {fileID: 2066864214949709701}
   firstPillar: {fileID: 1854041487868120097}
-  lastPillar: {fileID: 3804230367252693220}
+  returnPillars:
+  - {fileID: 5954651906878548301}
+  - {fileID: 7422452306317168452}
+  - {fileID: 993958398528610146}
+  - {fileID: 2717234498256397499}
+  - {fileID: 3804230367252693220}
   exitShore: {x: 84.5, y: 3.9837027, z: 85}
 --- !u!82 &7096380691478703415
 AudioSource:

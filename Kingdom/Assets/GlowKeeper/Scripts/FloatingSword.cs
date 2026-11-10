@@ -21,12 +21,45 @@ public class FloatingSword : MonoBehaviour
     private Vector3 landingPoint;
     private Vector3 hoverCenter;
     private Transform followedHand;
+    private Transform standParent;
+    private Pose standPose, visualStandPose;
+    private Vector3 lightStandPosition;
+    private float standLightIntensity;
 
     public float damage = 0f;
 
     private static readonly List<FloatingSword> activeBlades = new();
 
     public static IReadOnlyList<FloatingSword> ActiveBlades => activeBlades;
+
+    private void Awake()
+    {
+        standParent = transform.parent;
+        standPose = new Pose(transform.localPosition, transform.localRotation);
+        if (swordVisual)
+            visualStandPose = new Pose(swordVisual.localPosition, swordVisual.localRotation);
+        if (swordLight)
+        {
+            lightStandPosition = swordLight.transform.localPosition;
+            standLightIntensity = swordLight.intensity;
+        }
+    }
+
+    public void ReturnToStand()
+    {
+        followedHand = null;
+        IsHeld = false;
+        if (transform.parent != standParent)
+            transform.SetParent(standParent, false);
+        transform.SetLocalPositionAndRotation(standPose.position, standPose.rotation);
+        if (swordVisual)
+            swordVisual.SetLocalPositionAndRotation(visualStandPose.position, visualStandPose.rotation);
+        if (swordLight)
+        {
+            swordLight.transform.localPosition = lightStandPosition;
+            swordLight.intensity = standLightIntensity;
+        }
+    }
 
     private void OnEnable()
     {

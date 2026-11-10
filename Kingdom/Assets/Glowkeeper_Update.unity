@@ -20881,6 +20881,7 @@ MonoBehaviour:
   sunsetMinutes: 3
   nightMinutes: 30
   sunriseStartHour: 6
+  startOffsetMinutes: 29
   skyYear: 2019
   skyMonth: 3
   skyDay: 21

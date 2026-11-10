@@ -133,6 +133,8 @@ public class FirstPuzzleMission : MonoBehaviour
         else if (player.CanClaimSword)
             message = player.CanClaimCursedBlade
                 ? "Press E to claim the Cursed Blade." : "Press E to claim the sword.";
+        else if (player.CarryingUnsecuredCursedBlade)
+            message = "Cross the return pillars to keep the blade.";
         else if (player.HeldSword)
             message =  "Hold E again to store the sword.";
 

@@ -11,13 +11,14 @@ public class Puzzle3Guardian : MonoBehaviour
     [SerializeField] private FirstPuzzleMission guidance;
     [SerializeField] private PlayerSwordPuzzle player;
     [SerializeField] private Puzzle3PoisonWater poison;
-    [SerializeField] private Collider firstPillar, lastPillar;
+    [SerializeField] private Collider firstPillar;
+    [SerializeField] private Collider[] returnPillars;
     [SerializeField] private Vector3 exitShore;
 
     private bool activated;
     private bool sawWater, sawPath, sawDayPlate, sawNightPlate, carriedCrystal;
     private bool sawBridge, sawBlade, claimedBlade, completed;
-    private int offeredCount, exitPillarRespawn = -1;
+    private int offeredCount, returnStep;
     private CharacterController walker;
     private BoxCollider water;
 
@@ -49,6 +50,11 @@ public class Puzzle3Guardian : MonoBehaviour
     {
         if (completed || !guidance || !walker || !water || !ritual || crystals == null) return;
 
+        if (ritual.PlayerOnPlate && !ritual.IsActive)
+            SayOnce(ref sawDayPlate, "The spirits slumber beneath the sun. Return when the moon rises, and three hidden lights shall answer your call.");
+        else
+            sawDayPlate = false;
+
         Vector3 position = walker.transform.position;
         Vector3 atWater = new Vector3(position.x, water.bounds.max.y, position.z);
         if (position.y < atWater.y + 6f && Vector3.Distance(atWater, water.ClosestPoint(atWater)) < 8f)
@@ -58,8 +64,6 @@ public class Puzzle3Guardian : MonoBehaviour
         {
             if (sawWater && Vector3.Distance(position, ritual.transform.position) < 14f)
                 SayOnce(ref sawPath, "Above these cursed depths, an ancient guardian keeps its watch. Climb the stones and seek the forgotten altar.");
-            if (ritual.PlayerOnPlate && !ritual.IsActive)
-                SayOnce(ref sawDayPlate, "The spirits slumber beneath the sun. Return when the moon rises, and three hidden lights shall answer your call.");
             if (ritual.IsActive)
                 SayOnce(ref sawNightPlate, "Three wandering lights awaken beneath the moon. Seek their glow among the rocks, and return them to the guardian's stone altars.");
 
@@ -83,19 +87,31 @@ public class Puzzle3Guardian : MonoBehaviour
             SayOnce(ref sawBridge, "Stone rises, stone falls, and death waits beneath. Time each leap, brave warrior, and cross the cursed waters to claim your blade.");
         if (player.CanClaimCursedBlade)
             SayOnce(ref sawBlade, "Upon the highest stone lies the blade of the forgotten king. Press E to claim its power.");
-        if (player.IsHoldingCursedBlade)
-            SayOnce(ref claimedBlade, "The Cursed Blade is yours! Yet your trial is not over. Return across the rising stones and reach the safety of the shore.");
-        if (!claimedBlade || !walker.isGrounded) return;
+        if (!player.CarryingUnsecuredCursedBlade)
+        {
+            if (claimedBlade)
+                guidance.SayQuestHint("The waters took the blade. It awaits you again on the centre stone.");
+            claimedBlade = false;
+            returnStep = 0;
+            return;
+        }
 
-        // A fall invalidates the last pillar visit. Reach it again before the exit counts.
-        if (lastPillar && position.y >= atWater.y &&
+        SayOnce(ref claimedBlade, "Carry the Cursed Blade across the return pillars. It will be yours when you reach the far shore.");
+        if (!walker.isGrounded || position.y < atWater.y || returnPillars == null || returnPillars.Length != 5)
+            return;
+
+        if (returnStep < returnPillars.Length &&
             Physics.Raycast(position + Vector3.up * 0.15f, Vector3.down,
                 out RaycastHit ground, 0.55f, ~0, QueryTriggerInteraction.Ignore) &&
-            ground.collider == lastPillar)
-            exitPillarRespawn = poison.RespawnCount;
+            ground.collider == returnPillars[returnStep])
+            returnStep++;
 
-        if (exitPillarRespawn == poison.RespawnCount && Vector3.Distance(position, exitShore) < 3f)
+        if (returnStep == returnPillars.Length && Vector3.Distance(position, exitShore) < 3f)
+        {
+            player.SecureCursedBlade();
+            ritual.KeepPlateLit();
             SayOnce(ref completed, "Trial Complete! The cursed waters have been conquered, and the ancient blade now belongs to you.");
+        }
     }
 
     private void SayOnce(ref bool shown, string message)

@@ -216,6 +216,9 @@ public class ThirdPersonAvatarController : MonoBehaviour
                 water.ClosestPoint(sample) == sample)
                 surface = Mathf.Max(surface, water.bounds.max.y);
         }
+        // The ocean trigger also covers the poison cove. Keep gravity there.
+        if (!float.IsNegativeInfinity(surface) && Puzzle3PoisonWater.BlocksSwimming(sample))
+            return float.NegativeInfinity;
         return surface;
     }
 
