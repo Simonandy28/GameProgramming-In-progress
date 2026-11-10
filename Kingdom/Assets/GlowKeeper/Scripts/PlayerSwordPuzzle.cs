@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,22 +19,56 @@ public class PlayerSwordPuzzle : MonoBehaviour
     public Transform storage;
     public float attackRange = 4.1f;
     public float pickupRange = 2.6f;
+    [SerializeField] public List<FloatingSword> storedBlades = new List<FloatingSword>();
     [SerializeField, HideInInspector] private float comboDuration = 3.633333f;
     [SerializeField, HideInInspector] private float storeHoldTime = 1f;
-    [HideInInspector] public GameObject[] storedBlades = new GameObject[8];
-    [HideInInspector] public int storedBladeCount;
     public bool IsAttacking { get; private set; }
     public bool CanClaimSword => !IsAttacking && !HeldSword && ClaimableSword;
     public bool CanClaimCursedBlade => cursedSword && CanClaimSword && ClaimableSword == cursedSword;
     public bool IsHoldingCursedBlade => cursedSword && cursedSword.IsHeld;
-    public FloatingSword HeldSword => sword && sword.IsHeld ? sword :
-        TigerSword && TigerSword.IsHeld ? TigerSword : IsHoldingCursedBlade ? cursedSword : null;
+    public FloatingSword HeldSword
+    {
+        get
+        {
+            foreach (FloatingSword blade in FloatingSword.ActiveBlades)
+            {
+                if (blade && blade.IsHeld)
+                    return blade;
+            }
+
+            return null;
+        }
+    } //sword && sword.IsHeld ? sword :
+      //TigerSword && TigerSword.IsHeld ? TigerSword : IsHoldingCursedBlade ? cursedSword : null;
 
     private FloatingSword TigerSword => tigerStone ? tigerStone.sword : null;
-    private FloatingSword ClaimableSword => IsCloseEnoughToPickUp(sword) ? sword :
-        IsCloseEnoughToPickUp(TigerSword) ? TigerSword :
-        IsCloseEnoughToPickUp(cursedSword) ? cursedSword : null;
+    private FloatingSword ClaimableSword
+    {
+        get
+        {
+            FloatingSword closest = null;
+            float closestDistance = pickupRange;
 
+            foreach (FloatingSword blade in FloatingSword.ActiveBlades)
+            {
+                if (!blade || !IsCloseEnoughToPickUp(blade))
+                    continue;
+
+                float distance = Vector3.Distance(
+                    transform.position,
+                    blade.transform.position
+                );
+
+                if (distance >= closestDistance)
+                    continue;
+
+                closest = blade;
+                closestDistance = distance;
+            }
+
+            return closest;
+        }
+    }
     private float heldTime;
     private bool holdingToStore;
     private Coroutine strikeRoutine;
@@ -92,8 +127,12 @@ public class PlayerSwordPuzzle : MonoBehaviour
             if (HeldSword) holdingToStore = true;
             else
             {
-                var blade = ClaimableSword;
-                if (blade) blade.PickUp(swordHandTarget);
+                FloatingSword blade = ClaimableSword;
+
+                if (blade)
+                    blade.PickUp(swordHandTarget);
+                else
+                    DrawSword();
             }
         }
 
@@ -130,15 +169,11 @@ public class PlayerSwordPuzzle : MonoBehaviour
 
     private void StoreSword(FloatingSword blade)
     {
-        if (!blade) return;
-        for (int i = 0; i < storedBlades.Length; i++)
-        {
-            if (storedBlades[i]) continue;
-            storedBlades[i] = blade.gameObject;
-            storedBladeCount++;
-            blade.Store(storage);
+        if (!blade || !blade.IsHeld || storedBlades.Contains(blade))
             return;
-        }
+
+        storedBlades.Add(blade);
+        blade.Store(storage);
     }
 
     private void OnDisable()
@@ -149,5 +184,25 @@ public class PlayerSwordPuzzle : MonoBehaviour
             StopAllCoroutines();
             ClearStrike();
         }
+    }
+
+    private void DrawSword()
+    {
+        if (HeldSword || storedBlades.Count == 0) return;
+
+        FloatingSword bestBlade = null;
+
+        foreach (FloatingSword blade in storedBlades)
+        {
+            if (!blade) continue;
+
+            if (!bestBlade || blade.damage > bestBlade.damage)
+                bestBlade = blade;
+        }
+
+        if (!bestBlade) return;
+
+        storedBlades.Remove(bestBlade);
+        bestBlade.Draw(swordHandTarget);
     }
 }

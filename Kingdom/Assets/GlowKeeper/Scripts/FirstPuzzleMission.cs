@@ -134,8 +134,7 @@ public class FirstPuzzleMission : MonoBehaviour
             message = player.CanClaimCursedBlade
                 ? "Press E to claim the Cursed Blade." : "Press E to claim the sword.";
         else if (player.HeldSword)
-            message = player.storedBladeCount < player.storedBlades.Length
-                ? "Hold E again to store the sword." : "Blade storage is full.";
+            message =  "Hold E again to store the sword.";
 
         // Give the longer crystal hints two lines, then restore the normal prompt layout.
         if (hintPanel && wideHint != puzzleTwoHint)

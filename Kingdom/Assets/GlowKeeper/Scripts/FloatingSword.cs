@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FloatingSword : MonoBehaviour
@@ -20,6 +21,23 @@ public class FloatingSword : MonoBehaviour
     private Vector3 landingPoint;
     private Vector3 hoverCenter;
     private Transform followedHand;
+
+    public float damage = 0f;
+
+    private static readonly List<FloatingSword> activeBlades = new();
+
+    public static IReadOnlyList<FloatingSword> ActiveBlades => activeBlades;
+
+    private void OnEnable()
+    {
+        if (!activeBlades.Contains(this))
+            activeBlades.Add(this);
+    }
+
+    private void OnDisable()
+    {
+        activeBlades.Remove(this);
+    }
 
     public void ReleaseFromStone()
     {
@@ -117,5 +135,11 @@ public class FloatingSword : MonoBehaviour
         else
             transform.SetParent(storage, true);
         gameObject.SetActive(false); // The inventory array still remembers it.
+    }
+
+    public void Draw(Transform hand)
+    {
+        gameObject.SetActive(true);
+        PickUp(hand);
     }
 }

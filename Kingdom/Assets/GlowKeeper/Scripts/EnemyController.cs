@@ -78,7 +78,6 @@ public class EnemyController : MonoBehaviour
         {
             return;
         }
-        Debug.Log("hit smth : " + otherController.gameObject.name);
         
         PlayerFight player = otherController.gameObject.GetComponent<PlayerFight>();
         if ( player != null)
