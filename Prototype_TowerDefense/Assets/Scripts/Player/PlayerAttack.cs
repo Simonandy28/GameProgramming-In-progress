@@ -18,16 +18,22 @@ public class PlayerAttack : MonoBehaviour
         inputSystem = new InputSystem_Actions();
     }
 
+    void Start()
+    {
+        attackArea.SetActive(isAttacking);
+    }
+
     void Update()
     {
-        bool attack = inputSystem.Player.Attack.IsPressed();
+        bool attack = inputSystem.Player.Attack.triggered;
 
         if (attack && !isAttacking)
-        {
+        { 
             isAttacking = true;
-            Attack();
-        }
-        else
+            Attack();   
+        } 
+
+        if (isAttacking)
         {
             timer += Time.deltaTime;
             if (timer >= attackDuration)

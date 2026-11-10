@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class AttackArea : MonoBehaviour
+public class SwordHitBox : MonoBehaviour
 {
     private HashSet<BasicUnit> unitsHitThisAttack = new HashSet<BasicUnit>();
 

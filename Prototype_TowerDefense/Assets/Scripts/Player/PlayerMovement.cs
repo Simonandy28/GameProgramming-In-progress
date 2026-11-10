@@ -32,13 +32,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Gravity();
-        Movement();
-        Jump();
-    }
-
-    private void Gravity()
-    {
         isGrounded = Physics.CheckSphere(ground.position, distanceToGround, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -46,25 +39,22 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
-    }
-
-    private void Movement()
-    {
         move = inputSystem.Player.Move.ReadValue<Vector2>();
+        Vector3 moveDirection = transform.right * move.x + transform.forward * move.y;
 
-        Vector3 distance = transform.right * move.x + transform.forward * move.y;
-        controller.Move(distance * moveSpeed * Time.deltaTime);
-    }
-
-    private void Jump()
-    {
         if (inputSystem.Player.Jump.triggered && isGrounded)
         {
             velocity.y = Mathf.Sqrt(JumpHeight * -2f * gravity);
         }
+
+        velocity.y += gravity * Time.deltaTime;
+        moveDirection *= moveSpeed;
+        moveDirection.y = velocity.y;
+
+        controller.Move(moveDirection * Time.deltaTime);
     }
+
+
 
     private void OnEnable()
     {
