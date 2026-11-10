@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public float distanceToGround = 0.4f;
 
+    [Header("Animation")]
+    public Animator animator;
+
 
     private InputSystem_Actions inputSystem;
     private Vector3 velocity;
@@ -27,6 +30,11 @@ public class PlayerMovement : MonoBehaviour
     {        
         inputSystem = new InputSystem_Actions();
         controller = GetComponent<CharacterController>();
+
+        if (animator == null)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
     }
 
     // Update is called once per frame
@@ -52,6 +60,12 @@ public class PlayerMovement : MonoBehaviour
         moveDirection.y = velocity.y;
 
         controller.Move(moveDirection * Time.deltaTime);
+    
+        if (animator == null) return;
+
+        float forwardSpeed = Mathf.Abs(move.y) > 0.01f ? move.y : move.magnitude;
+        animator.SetFloat("Speed", forwardSpeed, 0.1f, Time.deltaTime);
+        animator.SetBool("IsGrounded", isGrounded);
     }
 
 

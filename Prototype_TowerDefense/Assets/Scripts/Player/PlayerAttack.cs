@@ -5,8 +5,8 @@ public class PlayerAttack : MonoBehaviour
     [Header("Attack Area")]
     public GameObject attackArea;
 
-    [Header("Attack Settings")]
-    public float attackDuration = 0.5f; 
+    [Header("Animation")]
+    public Animator animator;
 
     private bool isAttacking = false;
     private float timer = 0f;
@@ -16,6 +16,10 @@ public class PlayerAttack : MonoBehaviour
     void Awake()
     {
         inputSystem = new InputSystem_Actions();
+        if (animator == null)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
     }
 
     void Start()
@@ -25,30 +29,32 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        bool attack = inputSystem.Player.Attack.triggered;
-
-        if (attack && !isAttacking)
+        if (inputSystem.Player.Attack.WasPressedThisFrame() && !isAttacking)
         { 
             isAttacking = true;
-            Attack();   
+            if (animator != null)
+            {
+                animator.SetTrigger("Attack");
+            }
         } 
 
-        if (isAttacking)
-        {
-            timer += Time.deltaTime;
-            if (timer >= attackDuration)
-            {
-                isAttacking = false;
-                timer = 0f;
-                attackArea.SetActive(isAttacking);    
-            }
-        }
+      
     }
 
-    private void Attack()
+    public void EnableHitBox()
     {
-        Debug.Log("Attack initiated");
-        attackArea.SetActive(isAttacking);
+        attackArea.SetActive(true);
+    }
+
+    public void DisableHitBox()
+    {
+        attackArea.SetActive(false);
+    }
+
+    public void EndAttack()
+    {
+        isAttacking = false;
+        attackArea.SetActive(false);
     }
 
     void OnEnable()
