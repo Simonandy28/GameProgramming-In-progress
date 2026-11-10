@@ -7,13 +7,12 @@ public class CrackableMagicStone : MonoBehaviour
     public GameObject rewardGlow;
     public FloatingSword sword;
     public Collider solidCollider;
-    public LODGroup stoneLOD;
-    public Renderer[] stoneRenderers;
-    public GameObject[] crackStages;
-    public GameObject rubble;
-    public AudioSource impactAudio;
-    public AudioClip hitSound;
-    public AudioClip breakSound;
+    [SerializeField] private LODGroup stoneLOD;
+    [SerializeField] private Renderer[] stoneRenderers;
+    [SerializeField] private GameObject rubble;
+    [SerializeField] private AudioSource impactAudio;
+    [SerializeField] private AudioClip hitSound;
+    [SerializeField] private AudioClip breakSound;
     public int hitsToBreak = 3;
     public bool IsBroken { get; private set; }
     public int Hits { get; private set; }
@@ -33,7 +32,6 @@ public class CrackableMagicStone : MonoBehaviour
         Hits++;
         impactAudio.PlayOneShot(hitSound);
         if (Hits >= hitsToBreak) BreakStone(playerCollider);
-        else if (Hits - 1 < crackStages.Length) crackStages[Hits - 1].SetActive(true);
     }
 
     private void BreakStone(CharacterController playerCollider)
@@ -42,7 +40,6 @@ public class CrackableMagicStone : MonoBehaviour
         solidCollider.enabled = false;
         if (stoneLOD) stoneLOD.enabled = false;
         foreach (Renderer surface in stoneRenderers) surface.enabled = false;
-        foreach (GameObject cracks in crackStages) cracks.SetActive(false);
         if (rewardGlow) rewardGlow.SetActive(false);
         // Detection is finished. Leave the swarm and its target alive.
         if (detector)

@@ -4,16 +4,18 @@ public class TigerSequencePuzzle : MonoBehaviour
 {
     public TigerTile[] tiles;
     public int[] order = { 3, 1, 4, 2 };
+    [SerializeField] private CrystalGuardianOffering guardian;
 
     private int step = 0;
     private bool completed = false;
     public bool IsComplete => completed;
     public bool IsMelodyPlaying { get; set; }
+    public bool CanUseTiles => guardian && guardian.HasPlayedOpeningMelody && !IsMelodyPlaying;
     public int WrongTileCount { get; private set; }
 
     public void CheckTile(int number)
     {
-        if (completed || IsMelodyPlaying) return;
+        if (completed || !CanUseTiles) return;
 
         if (number != order[step])
         {

@@ -8,17 +8,20 @@ public class CrystalGuardianOffering : MonoBehaviour
     public Transform crystal;
     public Transform offeringTarget;
     public InputActionReference interactAction;
-    public Light eyeGlow;
-    public AudioSource hum;
-    public AudioSource guardianMelodyAudio;
+    [SerializeField] private Light eyeGlow;
+    [SerializeField] private AudioSource hum;
+    [SerializeField] private AudioSource guardianMelodyAudio;
     public TigerSequencePuzzle tigerPuzzle;
-    [Min(0f)] public float tonePause = 0.25f;
+    [Min(0f)] [SerializeField] private float tonePause = 0.25f;
 
     public float interactDistance = 3f;
     public float moveSpeed = 5f;
 
     public bool IsPlayerNearby => player &&
         Vector3.Distance(player.position, transform.position) <= interactDistance;
+    public bool CanOffer => isActiveAndEnabled && !offering && !completed && IsPlayerNearby &&
+        interactAction && interactAction.action.enabled && crystal && offeringTarget &&
+        crystal.parent && crystal.parent.name == "CrystalHandTarget";
     public bool HasPlayedOpeningMelody { get; private set; }
 
     private bool offering;
@@ -32,13 +35,13 @@ public class CrystalGuardianOffering : MonoBehaviour
 
         if (completed)
         {
-            if (pressedNearby && tigerPuzzle && !tigerPuzzle.IsMelodyPlaying && !tigerPuzzle.IsComplete)
+            if (pressedNearby && tigerPuzzle && tigerPuzzle.CanUseTiles && !tigerPuzzle.IsComplete)
                 StartCoroutine(PlayMelody(false));
             return;
         }
 
         if (!crystal || !offeringTarget) return;
-        if (!offering && pressedNearby && crystal.parent != null && crystal.parent.name == "CrystalHandTarget")
+        if (pressedNearby && CanOffer)
         {
             offering = true;
             crystal.SetParent(null);

@@ -9,13 +9,13 @@ public class FireflyHandAttraction : MonoBehaviour
     public Animator playerAnimator;
     public InputActionReference interactAction;
     [Tooltip("The three Firefly_Fred models inside the animated holders.")]
-    public Transform[] fireflies = new Transform[3];
+    [SerializeField] private Transform[] fireflies = new Transform[3];
 
     [Header("Settings")]
     [Min(0.1f)] public float interactionDistance = 3f;
     [Min(0.1f)] public float movementSpeed = 5f;
-    [Range(0.1f, 1f)] public float handFormationSize = 0.3f;
-    [Min(0.1f)] public float stoneFormationSize = 1.5f;
+    [Range(0.1f, 1f)] [SerializeField] private float handFormationSize = 0.3f;
+    [Min(0.1f)] [SerializeField] private float stoneFormationSize = 1.5f;
 
     public bool IsAtHand { get; private set; }
     public bool IsAtStone { get; private set; }
@@ -41,7 +41,7 @@ public class FireflyHandAttraction : MonoBehaviour
 
     private void Update()
     {
-        if (!player || !beeHandTarget || !interactAction) return;
+        if (!beeHandTarget || !interactAction) return;
 
         if (CanAttract && interactAction.action.WasPressedThisFrame())
         {

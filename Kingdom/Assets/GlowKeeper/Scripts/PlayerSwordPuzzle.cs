@@ -8,7 +8,9 @@ public class PlayerSwordPuzzle : MonoBehaviour
     public CrackableMagicStone stone;
     public FloatingSword sword;
     public CrackableMagicStone tigerStone;
-    public StoneStrikeEvents strikeEvents;
+    [SerializeField] private FloatingSword cursedSword;
+    [SerializeField] private Collider cursedSwordPlatform;
+    [SerializeField] private StoneStrikeEvents strikeEvents;
     public Animator animator;
     public InputActionReference attackAction;
     public InputActionReference interactAction;
@@ -16,18 +18,21 @@ public class PlayerSwordPuzzle : MonoBehaviour
     public Transform storage;
     public float attackRange = 4.1f;
     public float pickupRange = 2.6f;
-    public float comboDuration = 3.633333f;
-    public float storeHoldTime = 1f;
-    public GameObject[] storedBlades = new GameObject[8];
-    public int storedBladeCount;
+    [SerializeField, HideInInspector] private float comboDuration = 3.633333f;
+    [SerializeField, HideInInspector] private float storeHoldTime = 1f;
+    [HideInInspector] public GameObject[] storedBlades = new GameObject[8];
+    [HideInInspector] public int storedBladeCount;
     public bool IsAttacking { get; private set; }
     public bool CanClaimSword => !IsAttacking && !HeldSword && ClaimableSword;
+    public bool CanClaimCursedBlade => cursedSword && CanClaimSword && ClaimableSword == cursedSword;
+    public bool IsHoldingCursedBlade => cursedSword && cursedSword.IsHeld;
     public FloatingSword HeldSword => sword && sword.IsHeld ? sword :
-        TigerSword && TigerSword.IsHeld ? TigerSword : null;
+        TigerSword && TigerSword.IsHeld ? TigerSword : IsHoldingCursedBlade ? cursedSword : null;
 
     private FloatingSword TigerSword => tigerStone ? tigerStone.sword : null;
     private FloatingSword ClaimableSword => IsCloseEnoughToPickUp(sword) ? sword :
-        IsCloseEnoughToPickUp(TigerSword) ? TigerSword : null;
+        IsCloseEnoughToPickUp(TigerSword) ? TigerSword :
+        IsCloseEnoughToPickUp(cursedSword) ? cursedSword : null;
 
     private float heldTime;
     private bool holdingToStore;
@@ -67,8 +72,16 @@ public class PlayerSwordPuzzle : MonoBehaviour
 
     private bool IsCloseEnoughToPickUp(FloatingSword blade)
     {
-        return blade && blade.IsHovering &&
-            Vector3.Distance(transform.position, blade.transform.position) <= pickupRange;
+        if (!blade || Vector3.Distance(transform.position, blade.transform.position) > pickupRange)
+            return false;
+        if (blade != cursedSword) return blade.IsHovering;
+
+        // The guardian enables the blade with the platforms. Claim it from the centre stone.
+        return blade.gameObject.activeInHierarchy && !blade.IsHeld && cursedSwordPlatform &&
+            GetComponent<CharacterController>().isGrounded &&
+            Physics.Raycast(transform.position + Vector3.up * 0.15f, Vector3.down,
+                out RaycastHit ground, 0.55f, ~0, QueryTriggerInteraction.Ignore) &&
+            ground.collider == cursedSwordPlatform;
     }
 
     private void UpdateSwordInput()

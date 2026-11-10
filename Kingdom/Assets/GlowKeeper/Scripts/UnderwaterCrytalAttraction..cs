@@ -12,13 +12,15 @@ public class UnderwaterCrystalAttraction : MonoBehaviour
     private bool attracted;
     private bool collected;
 
+    public bool CanCollect => isActiveAndEnabled && !attracted && !collected &&
+        player && handTarget && interactAction && interactAction.action.enabled &&
+        Vector3.Distance(player.position, transform.position) <= pickupDistance;
+
     void Update()
     {
         if (!player || !handTarget || !interactAction) return;
 
-        if (!attracted && !collected &&
-            Vector3.Distance(player.position, transform.position) <= pickupDistance &&
-            interactAction.action.WasPressedThisFrame())
+        if (CanCollect && interactAction.action.WasPressedThisFrame())
         {
             attracted = true;
         }

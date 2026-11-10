@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TigerTile : MonoBehaviour
 {
-    public Light blueLight;
+    [SerializeField] private Light blueLight;
     public AudioSource tileSound;
     public TigerSequencePuzzle puzzle;
     public int tileNumber;
@@ -15,13 +15,12 @@ public class TigerTile : MonoBehaviour
         if (!other.CompareTag("Player") || !playerContacts.Add(other) || playerContacts.Count != 1)
             return;
 
-        // Count the entry, but stay quiet until the guardian finishes.
-        if (puzzle && puzzle.IsMelodyPlaying) return;
+        // Remember the entry so the player must step off and back on after the song.
+        if (!puzzle || !puzzle.CanUseTiles) return;
 
         if (tileSound)
             tileSound.Play();
-        if (puzzle)
-            puzzle.CheckTile(tileNumber);
+        puzzle.CheckTile(tileNumber);
     }
 
     void OnTriggerExit(Collider other)
@@ -31,7 +30,7 @@ public class TigerTile : MonoBehaviour
 
     public void Activate()
     {
-        if (blueLight) blueLight.enabled = true;
+        if (puzzle && puzzle.CanUseTiles && blueLight) blueLight.enabled = true;
     }
 
     public void ResetTile()

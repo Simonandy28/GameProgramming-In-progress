@@ -11,21 +11,21 @@ public class FireflyStoneDetector : MonoBehaviour
     public AudioSource buzzing;
     public Slider detectorMeter;
     public GameObject blueGlow;
-    public Light statueEyeGlow;
-    public AudioSource statueHum;
+    [SerializeField] private Light statueEyeGlow;
+    [SerializeField] private AudioSource statueHum;
     [Header("Buzzing at the plant")]
     public AudioSource plantBuzz;
-    [Min(0.1f)] public float plantBuzzRange = 14f;
-    [Range(0f, 1f)] public float plantMaxVolume = 0.45f;
+    [Min(0.1f)] [SerializeField] private float plantBuzzRange = 14f;
+    [Range(0f, 1f)] [SerializeField] private float plantMaxVolume = 0.45f;
 
     [Header("Detector settings")]
     [Min(0.1f)] public float detectionRange = 65f;
     [Min(0.1f)] public float closeActivationDistance = 3.5f;
-    [Min(0.1f)] public float signalSmoothing = 3f;
-    [Range(0f, 1f)] public float minVolume = 0.06f;
-    [Range(0f, 1f)] public float maxVolume = 0.6f;
-    [Range(0.1f, 3f)] public float minPitch = 0.85f;
-    [Range(0.1f, 3f)] public float maxPitch = 1.3f;
+    [Min(0.1f)] [SerializeField] private float signalSmoothing = 3f;
+    [Range(0f, 1f)] [SerializeField] private float minVolume = 0.06f;
+    [Range(0f, 1f)] [SerializeField] private float maxVolume = 0.6f;
+    [Range(0.1f, 3f)] [SerializeField] private float minPitch = 0.85f;
+    [Range(0.1f, 3f)] [SerializeField] private float maxPitch = 1.3f;
 
     // Changed: Check distance to the statue instead of the stone.
     public bool CanAwakenStone => swarm.IsAtHand && Vector3.Distance(swarm.player.position, stoneBeeTarget.position) <= closeActivationDistance;

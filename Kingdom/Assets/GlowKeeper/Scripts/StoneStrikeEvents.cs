@@ -5,7 +5,7 @@ public class StoneStrikeEvents : MonoBehaviour
 {
     public CrackableMagicStone stone;
     public Animator animator;
-    public bool striking;
+    [HideInInspector] public bool striking;
     public float handClearance = 0.16f;
 
     private ThirdPersonAvatarController movement;

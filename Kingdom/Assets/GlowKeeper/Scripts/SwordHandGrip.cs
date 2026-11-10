@@ -4,8 +4,8 @@ using UnityEngine;
 public class SwordHandGrip : MonoBehaviour
 {
     public FloatingSword sword;
-    public Transform[] fingers;
-    public Quaternion[] closedRotations;
+    [SerializeField] private Transform[] fingers;
+    [SerializeField] private Quaternion[] closedRotations;
 
     private PlayerSwordPuzzle player;
 

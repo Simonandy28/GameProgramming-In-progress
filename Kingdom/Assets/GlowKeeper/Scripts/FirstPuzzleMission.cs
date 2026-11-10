@@ -8,14 +8,14 @@ public class FirstPuzzleMission : MonoBehaviour
     public FireflyStoneDetector detector;
     public PlayerSwordPuzzle player;
 
-    public TextMeshProUGUI objective;
-    public TextMeshProUGUI prompt;
-    public TextMeshProUGUI subtitle;
-    public CanvasGroup subtitleGroup;
-    public AudioSource chimes;
-    public AudioClip awakeningChime;
-    public AudioClip victoryChime;
-    [Range(0f, 1f)] public float objectiveBuzzVolume = 0.25f;
+    [SerializeField] private TextMeshProUGUI objective;
+    [SerializeField] private TextMeshProUGUI prompt;
+    [SerializeField] private TextMeshProUGUI subtitle;
+    [SerializeField] private CanvasGroup subtitleGroup;
+    [SerializeField] private AudioSource chimes;
+    [SerializeField] private AudioClip awakeningChime;
+    [SerializeField] private AudioClip victoryChime;
+    [Range(0f, 1f)] [SerializeField] private float objectiveBuzzVolume = 0.25f;
 
     private enum Stage { Approach, FindFireflies, FollowSwarm, BreakStone, ClaimSword, Complete }
     private Stage stage;
@@ -24,6 +24,11 @@ public class FirstPuzzleMission : MonoBehaviour
     private RectTransform subtitlePanel;
     private float panelHeight;
     private float textHeight;
+    private SecondPuzzleMission secondPuzzle;
+    private RectTransform hintPanel;
+    private Vector2 hintSize, hintPosition, hintTextSize;
+    private TextWrappingModes hintWrapping;
+    private bool wideHint;
 
     private void Awake()
     {
@@ -31,6 +36,15 @@ public class FirstPuzzleMission : MonoBehaviour
         panelHeight = subtitlePanel.rect.height;
         textHeight = subtitle.rectTransform.rect.height;
         subtitle.textWrappingMode = TextWrappingModes.Normal;
+        secondPuzzle = GetComponent<SecondPuzzleMission>();
+        if (secondPuzzle && prompt)
+        {
+            hintPanel = (RectTransform)prompt.transform.parent;
+            hintSize = hintPanel.sizeDelta;
+            hintPosition = hintPanel.anchoredPosition;
+            hintTextSize = prompt.rectTransform.sizeDelta;
+            hintWrapping = prompt.textWrappingMode;
+        }
     }
 
     private void LateUpdate()
@@ -106,6 +120,7 @@ public class FirstPuzzleMission : MonoBehaviour
     private void UpdatePrompt()
     {
         string message = "";
+        bool puzzleTwoHint = false;
         if (detector.swarm.CanAttract)
             message = "Press E to attract the fireflies.";
         else if (detector.CanAwakenStone)
@@ -113,12 +128,24 @@ public class FirstPuzzleMission : MonoBehaviour
         else if (stage == Stage.BreakStone && !player.IsAttacking &&
             Vector3.Distance(player.transform.position, player.stone.transform.position) <= player.attackRange)
             message = "Face the stone and left click to strike.";
+        else if (secondPuzzle && secondPuzzle.isActiveAndEnabled && secondPuzzle.TryGetInteractionHint(out message))
+            puzzleTwoHint = true;
         else if (player.CanClaimSword)
-            message = "Press E to claim the sword.";
+            message = player.CanClaimCursedBlade
+                ? "Press E to claim the Cursed Blade." : "Press E to claim the sword.";
         else if (player.HeldSword)
             message = player.storedBladeCount < player.storedBlades.Length
                 ? "Hold E again to store the sword." : "Blade storage is full.";
 
+        // Give the longer crystal hints two lines, then restore the normal prompt layout.
+        if (hintPanel && wideHint != puzzleTwoHint)
+        {
+            wideHint = puzzleTwoHint;
+            hintPanel.sizeDelta = wideHint ? new Vector2(760f, 68f) : hintSize;
+            hintPanel.anchoredPosition = wideHint ? hintPosition + Vector2.down * 25f : hintPosition;
+            prompt.rectTransform.sizeDelta = wideHint ? new Vector2(706f, 60f) : hintTextSize;
+            prompt.textWrappingMode = wideHint ? TextWrappingModes.Normal : hintWrapping;
+        }
         prompt.text = message;
         prompt.transform.parent.gameObject.SetActive(message != "");
     }

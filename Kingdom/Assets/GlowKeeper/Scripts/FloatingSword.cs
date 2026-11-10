@@ -5,14 +5,14 @@ public class FloatingSword : MonoBehaviour
 {
     public Rigidbody body;
     public Collider swordCollider;
-    public float hoverHeight = 0.9f;
-    public float bobHeight = 0.1f;
+    [SerializeField] private float hoverHeight = 0.9f;
+    [SerializeField] private float bobHeight = 0.1f;
     [Header("Hand grip")]
     public Transform swordVisual;
     [Tooltip("Center of the handle in the sword model's own coordinates.")]
-    public Vector3 modelGripPoint = new Vector3(0f, -0.05f, 0f);
-    public Light swordLight;
-    public float heldLightIntensity = 0.4f;
+    [SerializeField] private Vector3 modelGripPoint = new Vector3(0f, -0.05f, 0f);
+    [SerializeField] private Light swordLight;
+    [SerializeField] private float heldLightIntensity = 0.4f;
     public bool IsHovering { get; private set; }
     public bool IsHeld { get; private set; }
 
@@ -34,10 +34,11 @@ public class FloatingSword : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.GetContact(0).normal.y > 0.4f)
+        ContactPoint contact = collision.GetContact(0);
+        if (contact.normal.y > 0.4f)
         {
             landed = true;
-            landingPoint = collision.GetContact(0).point;
+            landingPoint = contact.point;
         }
     }
 
