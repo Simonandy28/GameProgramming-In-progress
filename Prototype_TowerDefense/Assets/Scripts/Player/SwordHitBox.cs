@@ -12,14 +12,14 @@ public class SwordHitBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Ally") || other.isTrigger) return;
+        if (other.CompareTag("Ally") || other.CompareTag("Player") || other.isTrigger) return;
 
         IDamageable unit = other.GetComponentInParent<IDamageable>();
         
         if (unit != null && !unitsHitThisAttack.Contains(other))
         {
             unitsHitThisAttack.Add(other); 
-            unit.TakeDamage(10); 
+            unit.TakeDamage(20); 
         }
     }
 }

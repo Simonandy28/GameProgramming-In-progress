@@ -25,6 +25,8 @@ public class TowerBehavior : MonoBehaviour
     private float fireCountdown = 0f;
     private bool isDestroyed = false;
 
+    public bool IsDestroyed => isDestroyed;
+
     void Start()
     {
         activeVisual.SetActive(true);
@@ -119,6 +121,11 @@ public class TowerBehavior : MonoBehaviour
         if (inactiveCollider != null) 
         {
             inactiveCollider.enabled = true;
+        }
+
+        if (shootingRangeCollider != null)
+        {
+            shootingRangeCollider.enabled = false;
         }
 
         gameObject.tag = "DestroyedTower";

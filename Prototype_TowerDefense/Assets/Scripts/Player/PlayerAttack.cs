@@ -9,7 +9,6 @@ public class PlayerAttack : MonoBehaviour
     public Animator animator;
 
     private bool isAttacking = false;
-    private float timer = 0f;
 
     private InputSystem_Actions inputSystem;
 
@@ -37,8 +36,6 @@ public class PlayerAttack : MonoBehaviour
                 animator.SetTrigger("Attack");
             }
         } 
-
-      
     }
 
     public void EnableHitBox()

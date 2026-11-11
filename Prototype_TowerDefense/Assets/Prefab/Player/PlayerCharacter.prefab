@@ -640,7 +640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 019df69c9b13e46409c3490b3c31dfb8, type: 3}
       propertyPath: m_TagString
-      value: Ally
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4639045167473084996, guid: 019df69c9b13e46409c3490b3c31dfb8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -717,6 +717,10 @@ PrefabInstance:
     - target: {fileID: 7266960223025361991, guid: 019df69c9b13e46409c3490b3c31dfb8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8332125051526947044, guid: 019df69c9b13e46409c3490b3c31dfb8, type: 3}
+      propertyPath: m_CastShadows
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8332125051526947044, guid: 019df69c9b13e46409c3490b3c31dfb8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -1270,7 +1274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059cf744d27f84b368b4bf365eb19c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHealth: 100
+  maxHealth: 200
   destroyOnDeath: 1
 --- !u!4 &6407705542539625321 stripped
 Transform:

@@ -4,7 +4,8 @@ using UnityEngine;
 public class Health : MonoBehaviour, IDamageable
 {
     public int maxHealth = 100;
-    public int currentHealth { get; private set; } 
+    public int currentHealth { get; private set; }
+    public bool IsAlive => currentHealth > 0; 
 
     [Tooltip("If true, this GameObject is destroyed automatically when health reaches 0.")]
     public bool destroyOnDeath = true;

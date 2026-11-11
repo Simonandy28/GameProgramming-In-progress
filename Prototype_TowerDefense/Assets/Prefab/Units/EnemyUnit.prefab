@@ -500,6 +500,10 @@ PrefabInstance:
       propertyPath: m_WarningMessage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -516,19 +520,17 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100052, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7980125310012114974}
-    - targetCorrespondingSourceObject: {fileID: 100052, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 5481752346140450564}
     - targetCorrespondingSourceObject: {fileID: 100052, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 916895282619612759}
+    - targetCorrespondingSourceObject: {fileID: 100052, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6601537946887185743}
+    - targetCorrespondingSourceObject: {fileID: 100052, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7561637429406990518}
   m_SourcePrefab: {fileID: 100100000, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
---- !u!95 &4082388858824850292 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9500000, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
-  m_PrefabInstance: {fileID: 4082388858834292244}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4082388858834162848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400052, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
@@ -539,26 +541,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100052, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
   m_PrefabInstance: {fileID: 4082388858834292244}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7980125310012114974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4082388858834323648}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b61bafbcb7a2fc92800ce08d70082e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UnitMovement
-  moveSpeed: 10
-  gravity: -9.81
-  ground: {fileID: 5574654572424996109}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
-  distanceToGround: 0.03
-  animator: {fileID: 4082388858824850292}
 --- !u!143 &5481752346140450564
 CharacterController:
   m_ObjectHideFlags: 0
@@ -583,7 +565,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 0.99, z: 0}
 --- !u!114 &916895282619612759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,3 +580,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 50
   destroyOnDeath: 1
+--- !u!114 &6601537946887185743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082388858834323648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec5ffc74852fa5e793e073371d1afd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnitBehavior
+  moveSpeed: 3.5
+  rotationSpeed: 10
+  stoppingDistance: 0.2
+  separationRadius: 0.9
+  separationStrength: 2
+  targetTag: Ally
+  detectionRange: 8
+  attackRange: 1.5
+  attackDamage: 10
+  attackCooldown: 1.2
+--- !u!114 &7561637429406990518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082388858834323648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014466e584ff33605bb72d5422cd5d01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyPathController
+  waypoints: []
