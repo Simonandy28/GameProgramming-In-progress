@@ -1,11 +1,14 @@
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.XR;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyController : MonoBehaviour
 {
     public GameObject player;
+    private PlayerFight playerFight;
     public EnemySpawner spawner;
     [SerializeField] float speed = 1f;
     [SerializeField] float turnSpeed = 3f;
@@ -17,34 +20,28 @@ public class EnemyController : MonoBehaviour
     private float attackTimer = 0;
     [SerializeField] float attackCooldown = 2;
     private bool canAttack = true;
+
+    Vector3 destination;
+    NavMeshAgent agent;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        controller = this.gameObject.GetComponent<CharacterController>();
         currentHP = maxHP;
         animator.SetBool("IsWalking", true);
+        playerFight = player.GetComponent<PlayerFight>();
+
+        agent = GetComponent<NavMeshAgent>();
+        destination = agent.destination;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(player != null)
+        if (player == null)
         {
-            Vector3 moveDirection = (player.transform.position - this.transform.position).normalized;
-            moveDirection.y = 0f;
-            Quaternion targetRotation =
-                Quaternion.LookRotation(moveDirection);
-
-            transform.rotation = Quaternion.Slerp(
-                transform.rotation,
-                targetRotation,
-                turnSpeed * Time.deltaTime
-            );
-            Vector3 velocity =
-            moveDirection * speed;
-
-            controller.Move(velocity * Time.deltaTime);
+            return;
         }
         if(attackTimer < attackCooldown && canAttack == false)
         {
@@ -54,6 +51,17 @@ public class EnemyController : MonoBehaviour
         {
             attackTimer = 0;
             canAttack = true;
+        }
+
+        // Update destination if the target moves one unit
+        if (Vector3.Distance(destination, player.transform.position) > 1.0f)
+        {
+            destination = player.transform.position;
+            agent.destination = destination;
+        }
+        if (agent.remainingDistance <= 2.5f)
+        {
+            playerAtRange();
         }
     }
 
@@ -66,24 +74,17 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void OnControllerColliderHit(ControllerColliderHit hit)
+    void playerAtRange()
     {
         if (!canAttack)
         {
             return;
         }
-        CharacterController otherController = hit.collider.GetComponent<CharacterController>();
 
-        if (otherController == null)
-        {
-            return;
-        }
-        
-        PlayerFight player = otherController.gameObject.GetComponent<PlayerFight>();
         if ( player != null)
         {
             animator.SetTrigger("IsAttacking");
-            player.attackedByEnemy(damage);
+            playerFight.attackedByEnemy(damage);
             canAttack = false;
         }
     }
