@@ -18,7 +18,7 @@ public class UnitBehavior : MonoBehaviour
     public string targetTag = "Enemy";
     [Tooltip("If true, Enemies looking for 'Ally' will also target objects tagged 'Player'")]
     public bool includePlayerTag = true;
-    public float detectionRange = 8f;
+    public float detectionRange = 15f;
     public float attackRange = 1.5f;
     public int attackDamage = 10;
     public float attackCooldown = 2f;
