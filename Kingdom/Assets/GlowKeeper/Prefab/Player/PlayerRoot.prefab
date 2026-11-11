@@ -159,11 +159,11 @@ Transform:
   m_GameObject: {fileID: 1243011575962744934}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0306, y: 0.1724, z: 0.0128}
+  m_LocalPosition: {x: -0.030599594, y: 0.17239988, z: 0.012799592}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 327318422883296176}
+  m_Father: {fileID: 3383341201295046725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485820539173082322
 GameObject:
@@ -374,6 +374,38 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00000014901161, y: 0.26754007, z: 1.4632425}
     m_Extent: {x: 0.5802257, y: 0.13927898, z: 0.13829172}
   m_DirtyAABB: 0
+--- !u!1 &4562663411936428267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3383341201295046725}
+  m_Layer: 0
+  m_Name: LeftHandPuzzleHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3383341201295046725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4562663411936428267}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5944566623290369326}
+  m_Father: {fileID: 1455183949340752190}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7009306414338627763
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,9 +685,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6275298039375644533, guid: 73fc3488243010c48843c198972d1180, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3969414052797996189}
-    - targetCorrespondingSourceObject: {fileID: 6362516663765549843, guid: 73fc3488243010c48843c198972d1180, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 5257732089487792541, guid: 73fc3488243010c48843c198972d1180, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5944566623290369326}
+      addedObject: {fileID: 3383341201295046725}
     - targetCorrespondingSourceObject: {fileID: 6362516663765549843, guid: 73fc3488243010c48843c198972d1180, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8698006477635889187}
