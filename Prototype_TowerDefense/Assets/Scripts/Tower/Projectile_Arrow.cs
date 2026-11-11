@@ -36,11 +36,11 @@ public class Projectile_Arrow : MonoBehaviour
 
     void HitTarget()
     {
-        BasicUnit basicUnit = target.GetComponentInParent<BasicUnit>();
+        IDamageable targetHealth = target.GetComponentInParent<IDamageable>();
 
-        if (basicUnit != null)
+        if (targetHealth != null)
         {
-            basicUnit.CalculateDamage(damage);
+            targetHealth.TakeDamage(damage);
         }
 
         Destroy(gameObject);

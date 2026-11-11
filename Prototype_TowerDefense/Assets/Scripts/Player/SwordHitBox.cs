@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class SwordHitBox : MonoBehaviour
 {
-    private HashSet<BasicUnit> unitsHitThisAttack = new HashSet<BasicUnit>();
+    private HashSet<Collider> unitsHitThisAttack = new HashSet<Collider>();
 
     private void OnEnable()
     {
@@ -12,14 +12,14 @@ public class SwordHitBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        BasicUnit unit = other.GetComponentInParent<BasicUnit>();
+        if (other.CompareTag("Ally") || other.isTrigger) return;
+
+        IDamageable unit = other.GetComponentInParent<IDamageable>();
         
-        if (unit != null && !unitsHitThisAttack.Contains(unit))
+        if (unit != null && !unitsHitThisAttack.Contains(other))
         {
-            unitsHitThisAttack.Add(unit); 
-            unit.CalculateDamage(10); 
-            
-            Debug.Log($"Damaged: {unit.gameObject.name}");
+            unitsHitThisAttack.Add(other); 
+            unit.TakeDamage(10); 
         }
     }
 }

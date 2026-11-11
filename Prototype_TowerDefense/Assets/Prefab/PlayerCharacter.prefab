@@ -245,6 +245,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 019df69c9b13e46409c3490b3c31dfb8, type: 3}
+      propertyPath: m_TagString
+      value: Ally
+      objectReference: {fileID: 0}
     - target: {fileID: 4639045167473084996, guid: 019df69c9b13e46409c3490b3c31dfb8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.10462446
@@ -349,10 +353,10 @@ PrefabInstance:
       addedObject: {fileID: 2569658417846681726}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 019df69c9b13e46409c3490b3c31dfb8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5867583316812593710}
+      addedObject: {fileID: 3587741007677229767}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 019df69c9b13e46409c3490b3c31dfb8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3587741007677229767}
+      addedObject: {fileID: 5549744493419531308}
     - targetCorrespondingSourceObject: {fileID: 5045655844319453293, guid: 019df69c9b13e46409c3490b3c31dfb8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 804324244424051925}
@@ -844,18 +848,6 @@ MonoBehaviour:
     m_Bits: 64
   distanceToGround: 0.4
   animator: {fileID: 851718229297938207}
---- !u!114 &5867583316812593710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6231316465980194783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c3d0c183b16582009913ea5a528e90a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerBehavior
 --- !u!114 &3587741007677229767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,6 +862,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   attackArea: {fileID: 3790444343580796843}
   animator: {fileID: 851718229297938207}
+--- !u!114 &5549744493419531308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6231316465980194783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059cf744d27f84b368b4bf365eb19c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  maxHealth: 100
 --- !u!4 &6407705542539625321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 168817519097266663, guid: 019df69c9b13e46409c3490b3c31dfb8, type: 3}

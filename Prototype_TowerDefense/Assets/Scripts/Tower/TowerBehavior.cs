@@ -15,9 +15,9 @@ public class TowerBehavior : MonoBehaviour
 
     [Header("Tower Stats")]
     // Shots per seconds
+    public Health health;
     public float fireRate = 1f;
     public int damage = 10;
-    public int towerHitPoints = 100;
 
     private SphereCollider shootingRangeCollider;
     private List<GameObject> enemyUnitsInRange = new List<GameObject>();
@@ -35,6 +35,8 @@ public class TowerBehavior : MonoBehaviour
 
         shootingRangeCollider = GetComponent<SphereCollider>();
         shootingRangeCollider.isTrigger = true;
+
+        health.OnDeath += DestroyTower;
         
     }
 
@@ -87,7 +89,7 @@ public class TowerBehavior : MonoBehaviour
         Projectile_Arrow arrow = arrowGO.GetComponent<Projectile_Arrow>();
         if (arrow != null)
         {   
-            arrow.Initiate(currentTarget.GetComponent<BasicUnit>().aimPoint, damage);
+            arrow.Initiate(currentTarget.transform, damage);
         }
     }
 
@@ -104,15 +106,6 @@ public class TowerBehavior : MonoBehaviour
         if (enemyUnitsInRange.Contains(other.gameObject))
         {
             enemyUnitsInRange.Remove(other.gameObject);
-        }
-    }
-
-    public void CalculateDamage(int damageAmount)
-    {
-        towerHitPoints -= damageAmount;
-        if (towerHitPoints <= 0)
-        {
-            DestroyTower();
         }
     }
 
