@@ -10,12 +10,9 @@ public class EnemyController : MonoBehaviour
     public GameObject player;
     private PlayerFight playerFight;
     public EnemySpawner spawner;
-    [SerializeField] float speed = 1f;
-    [SerializeField] float turnSpeed = 3f;
     [SerializeField] Animator animator;
-    private CharacterController controller;
     public float maxHP = 3;
-    private float currentHP;
+    public float currentHP;
     [SerializeField] float damage = 1;
     private float attackTimer = 0;
     [SerializeField] float attackCooldown = 2;

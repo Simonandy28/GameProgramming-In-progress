@@ -18,6 +18,8 @@ public class PlayerSwordPuzzle : MonoBehaviour
     public Transform swordHandTarget;
     public Transform storage;
     public float attackRange = 4.1f;
+    [SerializeField] AttackArea attackArea;
+    [SerializeField] float attackCooldown = 1f;
     public float pickupRange = 2.6f;
     [SerializeField] public List<FloatingSword> storedBlades = new List<FloatingSword>();
     [SerializeField, HideInInspector] private float comboDuration = 3.633333f;
@@ -99,7 +101,7 @@ public class PlayerSwordPuzzle : MonoBehaviour
                 animator.Play("Firefly Casting.Ready", animator.GetLayerIndex("Firefly Casting"), 0f);
             }
         }
-        else if (attackAction && attackAction.action.WasPressedThisFrame())
+        else if (attackAction && attackAction.action.WasPressedThisFrame() && !IsAttacking)
         {
             if (strikeRoutine != null) StopCoroutine(strikeRoutine);
             strikeRoutine = StartCoroutine(Strike());
@@ -156,9 +158,27 @@ public class PlayerSwordPuzzle : MonoBehaviour
     {
         IsAttacking = true;
         strikeEvents.striking = true;
-        int layer = animator.GetLayerIndex("Firefly Casting");
-        animator.Play("Firefly Casting.Strike Magic Stone", layer, 0f);
-        yield return new WaitForSeconds(comboDuration + 0.3f);
+        
+        if (HeldSword)
+        {
+            animator.SetTrigger("Attack");
+            List<EnemyController> attacked = new();
+            foreach (EnemyController enemy in attackArea.atRange)
+            {
+                attacked.Add(enemy);   
+            }
+            foreach(EnemyController enemy in attacked)
+            {
+                enemy.Damaged(HeldSword.damage);
+            }
+            yield return new WaitForSeconds(attackCooldown);
+        }
+        else
+        {
+            int layer = animator.GetLayerIndex("Firefly Casting");
+            animator.Play("Firefly Casting.Strike Magic Stone", layer, 0f);
+            yield return new WaitForSeconds(comboDuration + 0.3f);
+        }
         ClearStrike();
     }
 

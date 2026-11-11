@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float spawnCooldown = 10;
     [SerializeField] EnemyController enemyPrefab;
     [SerializeField] GameObject player;
+    [SerializeField] AttackArea attackArea;
     private float spawnTimer = 0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,11 +31,13 @@ public class EnemySpawner : MonoBehaviour
         int spawnIndex = Random.Range(0, spawnPoints.Count);
         EnemyController instance = Instantiate<EnemyController>(enemyPrefab, spawnPoints[spawnIndex]);
         instance.player = player;
+        instance.spawner = this;
         return;
     }
 
     public void destroyEnemy(EnemyController enemy)
     {
+        attackArea.atRange.Remove(enemy);
         Destroy(enemy.gameObject);
     }
 }

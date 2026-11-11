@@ -190,6 +190,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2875179460740520496, guid: 04e318dc17ac520458072c2a74b33341, type: 3}
   m_PrefabInstance: {fileID: 1791704810}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &700227786 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8057411737179753773, guid: 04e318dc17ac520458072c2a74b33341, type: 3}
+  m_PrefabInstance: {fileID: 1791704810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19cc6196905af9f45af984b337236d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &1171968134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -421,17 +432,6 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 02387b372259ee54eb87a745b7e5bd7e, type: 2}
   m_BuildHeightMesh: 0
---- !u!114 &1291322553 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 62983285218369898, guid: b64186882e9387d43aaa28878e0a7dc3, type: 3}
-  m_PrefabInstance: {fileID: 9187927126314140661}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47519649238b9e245993039620308140, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FloatingSword
 --- !u!1 &1426065877
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,18 +596,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7820697765888584260, guid: 04e318dc17ac520458072c2a74b33341, type: 3}
-      propertyPath: storedBlades.Array.size
-      value: 1
+    - target: {fileID: 4973384371686202774, guid: 04e318dc17ac520458072c2a74b33341, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.75
       objectReference: {fileID: 0}
-    - target: {fileID: 7820697765888584260, guid: 04e318dc17ac520458072c2a74b33341, type: 3}
-      propertyPath: 'storedBlades.Array.data[0]'
-      value: 
-      objectReference: {fileID: 1291322553}
-    - target: {fileID: 7820697765888584260, guid: 04e318dc17ac520458072c2a74b33341, type: 3}
-      propertyPath: 'storedBlades.Array.data[1]'
-      value: 
-      objectReference: {fileID: 1291322553}
     - target: {fileID: 8620703327563632990, guid: 04e318dc17ac520458072c2a74b33341, type: 3}
       propertyPath: cameraTransform
       value: 
@@ -935,6 +927,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 370251498}
+    - target: {fileID: 1051278829931809724, guid: 3c4cc216c14585742a1ee7135333c52e, type: 3}
+      propertyPath: attackArea
+      value: 
+      objectReference: {fileID: 700227786}
     - target: {fileID: 1051278829931809724, guid: 3c4cc216c14585742a1ee7135333c52e, type: 3}
       propertyPath: enemyPrefab
       value: 
