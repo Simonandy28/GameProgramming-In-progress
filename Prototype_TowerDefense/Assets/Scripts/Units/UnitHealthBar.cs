@@ -13,7 +13,10 @@ public class UnitHealthBar : MonoBehaviour
         mainCamera = Camera.main;
 
         if (targetHealth != null)
+        {
             targetHealth.OnHealthChanged += UpdateHealthBar;
+            UpdateHealthBar(targetHealth.currentHealth, targetHealth.maxHealth);
+        }
     }
 
     private void OnDestroy()

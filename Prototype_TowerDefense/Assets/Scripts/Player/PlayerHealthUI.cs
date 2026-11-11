@@ -9,7 +9,10 @@ public class PlayerHealthUI : MonoBehaviour
     private void OnEnable()
     {
         if (playerHealth != null)
+        {
             playerHealth.OnHealthChanged += UpdateHealthBar;
+            UpdateHealthBar(playerHealth.currentHealth, playerHealth.maxHealth);
+        }
     }
 
     private void OnDisable()
