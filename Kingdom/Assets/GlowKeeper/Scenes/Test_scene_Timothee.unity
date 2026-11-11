@@ -596,10 +596,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4973384371686202774, guid: 04e318dc17ac520458072c2a74b33341, type: 3}
-      propertyPath: m_StepOffset
-      value: 0.75
-      objectReference: {fileID: 0}
     - target: {fileID: 8620703327563632990, guid: 04e318dc17ac520458072c2a74b33341, type: 3}
       propertyPath: cameraTransform
       value: 

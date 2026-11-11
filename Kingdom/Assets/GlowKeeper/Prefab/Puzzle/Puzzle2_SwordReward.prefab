@@ -231,6 +231,7 @@ MonoBehaviour:
   modelGripPoint: {x: 0, y: 0, z: 0}
   swordLight: {fileID: 246933861465240023}
   heldLightIntensity: 0.4
+  damage: 2
 --- !u!1001 &524491076683871730
 PrefabInstance:
   m_ObjectHideFlags: 0
