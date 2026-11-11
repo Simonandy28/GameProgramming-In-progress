@@ -16,6 +16,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float damage = 1;
     private float attackTimer = 0;
     [SerializeField] float attackCooldown = 2;
+    [SerializeField] float attackRange = 2.5f;
     private bool canAttack = true;
 
     Vector3 destination;
@@ -56,7 +57,7 @@ public class EnemyController : MonoBehaviour
             destination = player.transform.position;
             agent.destination = destination;
         }
-        if (agent.remainingDistance <= 2.5f)
+        if (Vector3.Distance(this.gameObject.transform.position, player.transform.position) <= attackRange)
         {
             playerAtRange();
         }
