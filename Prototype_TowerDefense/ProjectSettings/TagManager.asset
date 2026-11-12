@@ -10,6 +10,7 @@ TagManager:
   - FighterUnitType
   - MageUnitType
   - Water
+  - DestroyedTower
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - 
   - Water
   - UI
-  -
-  -
+  - Ground
+  - 
   - Suimono_Water
   - Suimono_Depth
   - Suimono_Screen
