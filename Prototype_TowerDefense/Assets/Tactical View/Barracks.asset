@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128a0a7366f5012488f0adf50c23c683, type: 3}
+  m_Name: Barracks
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingDefinition
+  displayName: Barracks
+  columns: 6
+  slots:
+  - icon: {fileID: 21300000, guid: ec6e647fb102f5547abd420baf58df3a, type: 3}
+    label: Skeleton Warrior
+    locked: 1
+    actionId: 
+  - icon: {fileID: 0}
+    label: Human Warrior
+    locked: 0
+    actionId: Recruit 1
+  - icon: {fileID: 21300000, guid: 869d95498ec79c34988fea33da16efde, type: 3}
+    label: Knight
+    locked: 0
+    actionId: Recruit
+  - icon: {fileID: 21300000, guid: f0979ae869ac17144a02253452d97aa5, type: 3}
+    label: Knight max
+    locked: 1
+    actionId: Upgrade Knight
+  - icon: {fileID: 0}
+    label: Random Field
+    locked: 0
+    actionId: Does nothing

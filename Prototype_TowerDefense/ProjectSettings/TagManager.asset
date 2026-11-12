@@ -9,6 +9,7 @@ TagManager:
   - HealerUnitType
   - FighterUnitType
   - MageUnitType
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -16,11 +17,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  -
+  -
+  - Suimono_Water
+  - Suimono_Depth
+  - Suimono_Screen
   - 
   - 
   - 
