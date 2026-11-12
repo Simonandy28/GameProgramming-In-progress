@@ -97,11 +97,14 @@ public class TowerBehavior : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if ((gameObject.tag == "Ally" && other.CompareTag("Enemy")) || (gameObject.tag == "Enemy" && other.CompareTag("Ally")))
+        bool otherIsAlly = other.CompareTag("Ally") || other.CompareTag("Player");
+
+        if ((gameObject.tag == "Ally" && other.CompareTag("Enemy")) || (gameObject.tag == "Enemy" && otherIsAlly))
         {
             enemyUnitsInRange.Add(other.gameObject);
         }
     }
+
 
     void OnTriggerExit(Collider other)
     {

@@ -47,10 +47,27 @@ public class MapIcon : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
     /// Called by TacticalMapView when the menu opens/closes for this icon
     public void SetSelected(bool value) { selected = value; Refresh(); }
 
+    /// Called by TacticalMapView right after creating the icon
+    public void Setup(MapTrackable trackable)
+    {
+        target = trackable.transform;
+        building = trackable.building;
+        normalSprite = trackable.normalSprite;
+        activeSprite = trackable.activeSprite;
+
+        if (!image) image = GetComponent<Image>();   // Awake hasn't run yet if the map is closed
+        image.preserveAspect = true;                 // non-square pictures keep their shape instead of being squashed
+        ((RectTransform)transform).sizeDelta = new Vector2(trackable.iconSize, trackable.iconSize);
+        Refresh();                                   // show the right picture right away
+    }
+
+
+
     // One place that decides which picture is shown
     void Refresh()
     {
-        if (!image || !normalSprite || !activeSprite) return;  // sprites not assigned yet -> leave the Image alone
-        image.sprite = (hovered || selected) ? activeSprite : normalSprite;
+        if (!image || !normalSprite) return;   // no picture yet -> leave the Image alone
+        image.sprite = (hovered || selected) && activeSprite ? activeSprite : normalSprite;
     }
+
 }

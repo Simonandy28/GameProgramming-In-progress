@@ -24,4 +24,10 @@ public struct BuildingSlotData
     public bool locked;
     [Tooltip("What happens when clicked, e.g. \"RecruitSwordsman\"")]
     public string actionId;
+
+    [Header("Recruiting (leave empty for non-unit slots)")]
+    [Tooltip("The unit prefab this slot recruits")]
+    public GameObject unitPrefab;
+    [Tooltip("Seconds until the unit comes out")]
+    [Min(0)] public float recruitTime;
 }

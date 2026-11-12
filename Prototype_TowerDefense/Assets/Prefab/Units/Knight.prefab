@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -434,7 +434,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100050, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
       propertyPath: m_Name
-      value: AlliedUnit
+      value: Knight
       objectReference: {fileID: 0}
     - target: {fileID: 100050, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
       propertyPath: m_TagString
@@ -522,6 +522,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100050, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1923132915091847259}
+    - targetCorrespondingSourceObject: {fileID: 100050, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7491084955281492842}
   m_SourcePrefab: {fileID: 100100000, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
 --- !u!1 &5365857844609446796 stripped
 GameObject:
@@ -582,6 +585,7 @@ MonoBehaviour:
   moveSpeed: 3.5
   rotationSpeed: 10
   stoppingDistance: 0.2
+  pathNetwork: {fileID: 0}
   separationRadius: 0.9
   separationStrength: 2
   targetTag: Enemy
@@ -602,6 +606,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdfbe78925f4af7d9ec4d5e01d7ab68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AllyCommandController
+--- !u!114 &7491084955281492842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5365857844609446796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd39348ed25fbde429ee0be608696bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapTrackable
+  normalSprite: {fileID: 21300000, guid: c95331d0ecd1a7943806de19a8ee2f49, type: 3}
+  activeSprite: {fileID: 0}
+  building: {fileID: 0}
+  iconSize: 38
 --- !u!4 &5365857844609937388 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400050, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}

@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -434,11 +434,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100052, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
       propertyPath: m_Name
-      value: EnemyUnit
+      value: Skeleton
       objectReference: {fileID: 0}
     - target: {fileID: 100052, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Ally
       objectReference: {fileID: 0}
     - target: {fileID: 400052, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
       propertyPath: m_LocalScale.x
@@ -530,6 +530,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100052, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7561637429406990518}
+    - targetCorrespondingSourceObject: {fileID: 100052, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1029142497667643554}
   m_SourcePrefab: {fileID: 100100000, guid: f3392e95529ae7540ad53657e3d0ce7d, type: 3}
 --- !u!4 &4082388858834162848 stripped
 Transform:
@@ -578,7 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059cf744d27f84b368b4bf365eb19c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHealth: 50
+  maxHealth: 60
   destroyOnDeath: 1
 --- !u!114 &6601537946887185743
 MonoBehaviour:
@@ -595,9 +598,10 @@ MonoBehaviour:
   moveSpeed: 3.5
   rotationSpeed: 10
   stoppingDistance: 0.2
+  pathNetwork: {fileID: 0}
   separationRadius: 0.9
   separationStrength: 2
-  targetTag: Ally
+  targetTag: Enemy
   includePlayerTag: 1
   detectionRange: 20
   attackRange: 1.5
@@ -616,3 +620,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPathController
   waypoints: []
+--- !u!114 &1029142497667643554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082388858834323648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd39348ed25fbde429ee0be608696bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapTrackable
+  normalSprite: {fileID: 21300000, guid: 2d0d3d52bd59fd34d92f3415ab33635f, type: 3}
+  activeSprite: {fileID: 0}
+  building: {fileID: 0}
+  iconSize: 38

@@ -1,8 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using TMPro;
 
-public class TacticalMapView : MonoBehaviour
+// IPointerClickHandler: clicks on the parchment (which has no click script itself) bubble up to here
+public class TacticalMapView : MonoBehaviour, IPointerClickHandler
 {
     [Header("Data")]
     [Tooltip("The calibrated MapDefinition asset")]
@@ -16,9 +19,11 @@ public class TacticalMapView : MonoBehaviour
     [Tooltip("Player/ToggleMap (Tab)")]
     public InputActionReference toggleMap;
 
-    [Header("Test (temporary)")]
-    [Tooltip("Icons under Icons that follow their Target")]
-    public MapIcon[] testIcons;
+    [Header("Icons")]
+    [Tooltip("Prefab every map icon is created from (Image + MapIcon)")]
+    public MapIcon iconPrefab;
+    [Tooltip("The Icons object inside MapFrame: new icons are created under it")]
+    public RectTransform iconParent;
 
     [Header("Popups")]
     [Tooltip("MenuLayer: holds Blocker, ActionMenu and BuildingPanel, gets shown/hidden")]
@@ -36,9 +41,21 @@ public class TacticalMapView : MonoBehaviour
     [Tooltip("The grid panel at the bottom (for buildings)")]
     public BuildingPanel buildingPanel;
 
-    MapIcon selected;   // the icon whose menu/panel is open (null = none)
+    MapIcon selected;                                      // the icon whose menu/panel is open (null = none)
+    readonly List<MapIcon> icons = new List<MapIcon>();    // every icon currently on the map
+
+    string pendingOrder;          // "Move" or "Attack" while we wait for the target click, null otherwise
+    UnitBehavior orderedUnit;     // the unit that gets that order
+
+    Behaviour[] heroScripts;        // hero look / move / attack: switched off while the map is open
+    CursorLockMode cursorBefore;    // cursor state before the map opened
+
 
     public bool IsOpen => root.activeSelf;
+
+    /// The Recruiter of the building whose panel is open (null if it can't recruit)
+    public Recruiter SelectedRecruiter => selected && selected.target ? selected.target.GetComponent<Recruiter>() : null;
+
 
     void OnEnable()
     {
@@ -58,6 +75,15 @@ public class TacticalMapView : MonoBehaviour
         root.SetActive(false);                     // map starts closed
         CloseActionMenu();                         // popups start closed too
         if (!map.IsValid) Debug.LogWarning("TacticalMapView: MapDefinition has no valid calibration yet.", this);
+
+        // The hero's scripts, if there is a hero in the scene (missing ones are simply null)
+        heroScripts = new Behaviour[]
+        {
+            FindAnyObjectByType<MouseMovement>(),
+            FindAnyObjectByType<PlayerMovement>(),
+            FindAnyObjectByType<PlayerAttack>()
+        };
+
     }
 
     void OnToggle(InputAction.CallbackContext ctx) => SetOpen(!IsOpen);
@@ -65,19 +91,44 @@ public class TacticalMapView : MonoBehaviour
     public void SetOpen(bool open)
     {
         root.SetActive(open);
-        if (!open) CloseActionMenu();              // closing the map also closes all popups
+        if (!open) CloseActionMenu();              // closing the map also closes all popups and cancels orders
+
+        // The hero locks the mouse for looking around: free it while the map is open, restore it afterwards
+        if (open) cursorBefore = Cursor.lockState;
+        Cursor.lockState = open ? CursorLockMode.None : cursorBefore;
+        Cursor.visible = open || cursorBefore != CursorLockMode.Locked;
+
+        // No looking around, walking or sword swings while you click on the map
+        foreach (Behaviour script in heroScripts)
+            if (script) script.enabled = !open;
     }
+
 
     // LateUpdate: runs after all Update()s, so units have already moved this frame
     void LateUpdate()
     {
         if (!IsOpen) return;                       // don't do any work while the map is hidden
 
-        foreach (MapIcon icon in testIcons)
-            if (icon && icon.target) PlaceIcon((RectTransform)icon.transform, icon.target.position);
+        icons.RemoveAll(icon => icon == null);     // forget icons whose unit was destroyed
+
+        foreach (MapIcon icon in icons)
+            if (icon.target) PlaceIcon((RectTransform)icon.transform, icon.target.position);
+
+        if (!selected && (menuLayer.activeSelf || pendingOrder != null))   // the selected unit died -> close / cancel
+            CloseActionMenu();
 
         if (selected && actionMenu.gameObject.activeSelf)   // the unit menu follows its icon
             actionMenu.position = selected.transform.position + (Vector3)menuOffset;
+    }
+
+    /// Called by MapTrackable: creates an icon for it under Icons
+    public MapIcon AddIcon(MapTrackable trackable)
+    {
+        MapIcon icon = Instantiate(iconPrefab, iconParent);
+        icon.name = trackable.name + " Icon";
+        icon.Setup(trackable);
+        icons.Add(icon);
+        return icon;
     }
 
     /// Puts a UI icon on the map at the spot matching a world position
@@ -89,13 +140,31 @@ public class TacticalMapView : MonoBehaviour
         icon.anchoredPosition = Vector2.zero;      // ...and sit exactly on it
     }
 
-    // ---------- Clicking icons ----------
+    // ---------- Clicking icons and the map ----------
 
-    /// Called by MapIcon when it gets clicked: buildings get the grid, units get the dropdown
+    /// Called by MapIcon when it gets clicked
     public void OnIconClicked(MapIcon icon)
     {
-        if (icon.building) OpenBuildingPanel(icon);
-        else OpenActionMenu(icon);
+        if (pendingOrder != null) { GiveOrder(icon.target.position); return; }   // waiting for a target -> this icon is it
+
+        UnitBehavior unit = icon.target ? icon.target.GetComponent<UnitBehavior>() : null;
+        if (icon.building) OpenBuildingPanel(icon);                     // your buildings get the grid
+        else if (unit && unit.CompareTag("Ally")) OpenActionMenu(icon); // only your own units get the dropdown
+        // enemy units, enemy buildings, towers, hero: clicking does nothing (but they can still be Attack targets)
+    }
+
+
+    /// A click on the parchment itself (not on an icon)
+    public void OnPointerClick(PointerEventData e)
+    {
+        if (pendingOrder == null) return;
+        if (e.button == PointerEventData.InputButton.Right) { CloseActionMenu(); return; }   // right-click cancels
+        if (e.button != PointerEventData.InputButton.Left) return;
+
+        // Screen pixel -> point inside the Icons rectangle -> 0..1 across the map (the reverse of PlaceIcon) -> world
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(iconParent, e.position, null, out Vector2 local);
+        Vector2 uv = Rect.PointToNormalized(iconParent.rect, local);
+        GiveOrder(map.UVToWorld(uv));
     }
 
     // Moves the outline from the old icon to the new one (null = nothing selected)
@@ -124,22 +193,39 @@ public class TacticalMapView : MonoBehaviour
         buildingPanel.Show(icon.building, this);
     }
 
-    /// Closes the unit menu AND the building panel.
-    /// Called by the Blocker button, by SetOpen(false) and after a unit action.
+    /// Closes the unit menu AND the building panel, and cancels a waiting order.
+    /// Called by the Blocker button, by SetOpen(false), after an order and on right-click.
     public void CloseActionMenu()
     {
         Select(null);
+        pendingOrder = null;
+        orderedUnit = null;
         if (menuLayer) menuLayer.SetActive(false);
     }
 
-    // ---------- Results ----------
+    // ---------- Orders ----------
 
-    /// Called by the 4 unit-menu buttons, each passes its own word ("Move", "Attack", ...)
+    /// Called by the Move / Attack buttons, each passes its own word
     public void DoAction(string action)
     {
         if (!selected) return;
-        string unit = selected.target ? selected.target.name : selected.name;
-        Debug.Log($"{action} ordered for {unit}");
+        orderedUnit = selected.target ? selected.target.GetComponent<UnitBehavior>() : null;
+        if (!orderedUnit) { CloseActionMenu(); return; }
+
+        pendingOrder = action;
+        menuLayer.SetActive(false);   // hide menu + Blocker so the next click reaches the map; the unit stays highlighted
+        Debug.Log(action == "Move" ? "Click on the map where to go (right-click cancels)"
+                                   : "Click on the icon to attack (right-click cancels)");
+    }
+
+    void GiveOrder(Vector3 worldPosition)
+    {
+        if (orderedUnit)   // the unit may have died while we were choosing
+        {
+            if (pendingOrder == "Move") orderedUnit.OrderMove(worldPosition);   // walk there, don't stop to fight
+            else orderedUnit.SetMoveDestination(worldPosition);                // attack: walk there and fight what's there
+            Debug.Log($"{pendingOrder} order for {orderedUnit.name}");
+        }
         CloseActionMenu();
     }
 
@@ -147,6 +233,10 @@ public class TacticalMapView : MonoBehaviour
     public void OnBuildingSlotClicked(BuildingSlotData slot)
     {
         if (!selected) return;
-        Debug.Log($"{selected.building.displayName}: {slot.actionId}");
+
+        Recruiter recruiter = SelectedRecruiter;
+        if (recruiter && slot.unitPrefab) recruiter.Recruit(slot);
+        else Debug.Log($"{selected.building.displayName}: {slot.actionId}");
     }
+
 }

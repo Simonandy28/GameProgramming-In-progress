@@ -548,6 +548,7 @@ GameObject:
   - component: {fileID: 8587418760336933669}
   - component: {fileID: 941378927659925618}
   - component: {fileID: 7779906835345799010}
+  - component: {fileID: -3506262445213384938}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -656,6 +657,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 400
   destroyOnDeath: 0
+--- !u!114 &-3506262445213384938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7122311377511259581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd39348ed25fbde429ee0be608696bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapTrackable
+  normalSprite: {fileID: 21300000, guid: 2f6618ca4af94df49884ca327b3c36f6, type: 3}
+  activeSprite: {fileID: 0}
+  building: {fileID: 0}
 --- !u!1 &7627117154400531702
 GameObject:
   m_ObjectHideFlags: 0

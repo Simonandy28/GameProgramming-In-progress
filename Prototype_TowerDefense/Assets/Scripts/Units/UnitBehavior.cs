@@ -1,3 +1,4 @@
+using System.Collections.Generic;   // [Paths]
 using UnityEngine;
 
 public class UnitBehavior : MonoBehaviour
@@ -6,6 +7,8 @@ public class UnitBehavior : MonoBehaviour
     public float moveSpeed = 3.5f;
     public float rotationSpeed = 10f;
     public float stoppingDistance = 0.2f;
+    [Tooltip("Units only walk along this path network. Empty = use the one in the scene")]   // [Paths]
+    public PathNetwork pathNetwork;                                                            // [Paths]
 
     [Header("Crowd Avoidance (Flanking)")]
     [Tooltip("Radius to push away from nearby friendly units so they surround targets instead of queuing behind each other.")]
@@ -29,13 +32,17 @@ public class UnitBehavior : MonoBehaviour
     private IDamageable currentTargetDamageable;
     private bool isCurrentTargetTower;
 
-    private Vector3? moveDestination;
+    private readonly List<Vector3> route = new List<Vector3>();   // [Paths] waypoints to walk (replaces moveDestination)
+    private int routeIndex;                                        // [Paths] waypoint we are walking to
+    private bool ignoreEnemies;   // [Orders] true during a Move order: walk on without stopping to fight
+
     private float attackTimer;
     private float scanTimer;
 
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
+        if (pathNetwork == null) pathNetwork = FindAnyObjectByType<PathNetwork>();   // [Paths]
     }
 
     // Scan for targets and handle movement/attacking
@@ -50,13 +57,14 @@ public class UnitBehavior : MonoBehaviour
             ClearTarget();
             ScanForTargets();
             scanTimer = 0.4f;
-        } else if (scanTimer <= 0f)
+        }
+        else if (scanTimer <= 0f)
         {
             scanTimer = 0.2f;
             ScanForTargets();
         }
 
-        if (IsTargetValid())
+        if (!ignoreEnemies && IsTargetValid())   // [Orders]
         {
             EngageTarget();
         }
@@ -70,7 +78,7 @@ public class UnitBehavior : MonoBehaviour
     {
         if (currentTarget == null || currentTargetCollider == null || currentTargetDamageable == null)
             return false;
-        
+
         if (!currentTargetCollider.enabled || !currentTarget.gameObject.activeInHierarchy)
             return false;
 
@@ -88,9 +96,9 @@ public class UnitBehavior : MonoBehaviour
         }
 
         Vector3 closestPoint = GetClosestPointSafe(currentTargetCollider, transform.position);
-        if(GetFlatDistance(transform.position, closestPoint) > detectionRange * 1.25f)
+        if (GetFlatDistance(transform.position, closestPoint) > detectionRange * 1.25f)
             return false;
-    
+
         return true;
     }
 
@@ -122,7 +130,7 @@ public class UnitBehavior : MonoBehaviour
             if (damageable == null || !damageable.IsAlive) continue;
 
             Component damageableComp = damageable as Component;
-            
+
             TowerBehavior tower = hit.GetComponentInParent<TowerBehavior>();
             bool isTower = tower != null;
 
@@ -175,8 +183,8 @@ public class UnitBehavior : MonoBehaviour
         {
             currentTargetCollider = chosenCollider;
             currentTargetDamageable = chosenCollider.GetComponentInParent<IDamageable>();
-            currentTarget = (currentTargetDamageable as Component != null) 
-                ? (currentTargetDamageable as Component).transform 
+            currentTarget = (currentTargetDamageable as Component != null)
+                ? (currentTargetDamageable as Component).transform
                 : chosenCollider.transform;
             isCurrentTargetTower = chosenCollider.GetComponentInParent<TowerBehavior>() != null;
         }
@@ -221,32 +229,27 @@ public class UnitBehavior : MonoBehaviour
         }
     }
 
+    // [Paths] Walk the route waypoint by waypoint
     private void MoveToDestination()
     {
-        if (moveDestination == null)
-        {
-            SetAnimatorSpeed(0f);
-            return;
-        }
+        // Waypoint reached -> on to the next one
+        if (routeIndex < route.Count && GetFlatDistance(transform.position, route[routeIndex]) <= stoppingDistance)
+            routeIndex++;
 
-        Vector3 flatTarget = new Vector3(moveDestination.Value.x, transform.position.y, moveDestination.Value.z);
-        float distance = Vector3.Distance(transform.position, flatTarget);
-
-        if (distance <= stoppingDistance)
-        {
-            moveDestination = null;
-            SetAnimatorSpeed(0f);
-        }
+        if (routeIndex < route.Count)
+            StepTowards(route[routeIndex], true);
         else
         {
-            StepTowards(moveDestination.Value, true);
+            SetAnimatorSpeed(0f);    // arrived, or no route
+            ignoreEnemies = false;   // [Orders] arrived -> defend itself again
         }
     }
+
 
     // Stepping towards a destination
     private void StepTowards(Vector3 targetPoint, bool useAvoidance)
     {
-       Vector3 desiredDir = targetPoint - transform.position;
+        Vector3 desiredDir = targetPoint - transform.position;
         desiredDir.y = 0f;
 
         if (desiredDir.sqrMagnitude < 0.0001f) return;
@@ -262,7 +265,7 @@ public class UnitBehavior : MonoBehaviour
             foreach (Collider neighbor in neighbors)
             {
                 if (neighbor.transform.IsChildOf(transform)) continue;
-                if (neighbor == currentTargetCollider) continue; 
+                if (neighbor == currentTargetCollider) continue;
 
                 if (neighbor.GetComponentInParent<UnitBehavior>() == null) continue;
 
@@ -280,6 +283,7 @@ public class UnitBehavior : MonoBehaviour
         }
 
         Vector3 nextPos = transform.position + desiredDir * (moveSpeed * Time.deltaTime);
+        nextPos.y = GroundHeight(nextPos);   // [Paths] follow the terrain up and down
         LookAtFlat(transform.position + desiredDir);
         transform.position = nextPos;
         SetAnimatorSpeed(moveSpeed);
@@ -326,15 +330,34 @@ public class UnitBehavior : MonoBehaviour
         }
     }
 
+    // [Paths] Height of the terrain under p (unchanged if there is no PathNetwork)
+    private float GroundHeight(Vector3 p)
+    {
+        if (pathNetwork == null) return p.y;
+        return pathNetwork.terrain.SampleHeight(p) + pathNetwork.terrain.transform.position.y;
+    }
     // Called by the Allied or Enemy Brain scripts
+    // [Paths] Finds a route along the paths. No route -> the unit stays where it is.
     public void SetMoveDestination(Vector3 destination)
     {
-        moveDestination = destination;
+        ignoreEnemies = false;   // [Orders] normal moves fight on the way
+        route.Clear();
+        routeIndex = 0;
+        if (pathNetwork == null || !pathNetwork.FindPath(transform.position, destination, route))
+            Debug.LogWarning($"{name}: no path to {destination}, staying here", this);
     }
+
+    // [Orders] Move order from the map: walk there without stopping to fight (e.g. to retreat)
+    public void OrderMove(Vector3 destination)
+    {
+        SetMoveDestination(destination);
+        ignoreEnemies = route.Count > 0;
+    }
+
 
     public bool HasReachedDestination()
     {
-        return moveDestination == null;
+        return routeIndex >= route.Count;   // [Paths]
     }
 
     // Visualizes ranges in the Scene View when the unit is selected
@@ -345,5 +368,9 @@ public class UnitBehavior : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+
+        Gizmos.color = Color.green;                       // [Paths] remaining route
+        for (int i = routeIndex; i < route.Count; i++)
+            Gizmos.DrawLine((i == routeIndex ? transform.position : route[i - 1]) + Vector3.up, route[i] + Vector3.up);
     }
 }

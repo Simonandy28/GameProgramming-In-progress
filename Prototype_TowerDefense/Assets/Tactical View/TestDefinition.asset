@@ -16,21 +16,29 @@ MonoBehaviour:
   imageSize: {x: 1672, y: 941}
   landmarks:
   - name: blue base
-    world: {x: 45, y: 132}
-    pixel: {x: 292, y: 606}
-    error: 0
+    world: {x: 165, y: 195}
+    pixel: {x: 919, y: 297}
+    error: 14.050501
   - name: topleft arc
-    world: {x: 51, y: 275}
-    pixel: {x: 352, y: 147}
-    error: 0.000045776367
+    world: {x: 245, y: 230}
+    pixel: {x: 1227, y: 208}
+    error: 35.413647
   - name: middle stone bottom right
-    world: {x: 232, y: 145}
-    pixel: {x: 920, y: 550}
-    error: 0.000061035156
-  a: 3.3388588
-  b: 0.2794884
-  c: -0.07654806
-  d: -3.2065783
-  e: 104.85887
-  f: 1032.713
+    world: {x: 241, y: 101}
+    pixel: {x: 1288, y: 576}
+    error: 38.72587
+  - name: middle stone bottom right
+    world: {x: 51, y: 131}
+    pixel: {x: 390, y: 471}
+    error: 35.821033
+  - name: middle stone bottom right
+    world: {x: 42, y: 270}
+    pixel: {x: 405, y: 130}
+    error: 34.372047
+  a: 4.35425
+  b: -0.073159285
+  c: -0.018418035
+  d: -2.6520433
+  e: 211.45131
+  f: 830.8294
   isValid: 1
