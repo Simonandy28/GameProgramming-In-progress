@@ -2,8 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Enemy
+  - Ally
+  - HealerUnitType
+  - FighterUnitType
+  - MageUnitType
+  - Water
+  - DestroyedTower
   layers:
   - Default
   - TransparentFX
@@ -11,11 +18,11 @@ TagManager:
   - 
   - Water
   - UI
+  - Ground
   - 
-  - 
-  - 
-  - 
-  - 
+  - Suimono_Water
+  - Suimono_Depth
+  - Suimono_Screen
   - 
   - 
   - 
@@ -50,27 +57,4 @@ TagManager:
   - Light Layer 5
   - Light Layer 6
   - Light Layer 7
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  m_MigratedRenderPipelines: []

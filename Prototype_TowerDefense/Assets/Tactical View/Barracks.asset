@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128a0a7366f5012488f0adf50c23c683, type: 3}
+  m_Name: Barracks
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingDefinition
+  displayName: Barracks
+  columns: 6
+  slots:
+  - icon: {fileID: 21300000, guid: ec6e647fb102f5547abd420baf58df3a, type: 3}
+    locked: 0
+    actionId: Recruit Skeleton
+    unitPrefab: {fileID: 4082388858834323648, guid: f24c60700c8da4ecfa04caf8b2b467f5, type: 3}
+    recruitTime: 3
+  - icon: {fileID: 21300000, guid: ff006254e2bd64148b36f07318298a69, type: 3}
+    locked: 0
+    actionId: Recruit Knight
+    unitPrefab: {fileID: 5365857844609446796, guid: b37c709f886b3ab78af15f5970faff60, type: 3}
+    recruitTime: 15
